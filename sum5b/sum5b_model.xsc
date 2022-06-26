@@ -1,7 +1,0 @@
-N:ci:-1:0 ps
-N:cix:-1:369 ps
-B:cix_ins:32:369 ps
-C:ci:32:0 ps
-C:cix:32:369 ps
-P:ci:ci:cix_ins:32:369 ps
-P:cix_ins:cix:cix:32:369 ps
