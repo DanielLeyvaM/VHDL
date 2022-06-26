@@ -1,0 +1,17 @@
+TOP 
+(
+    (IOPIN si.0);
+    (IOPIN x.0);
+)   
+
+RIGHT
+(
+    (IOPIN y.0);
+    (IOPIN ci.0);
+)
+
+BOTTOM
+(
+    (IOPIN co.0);
+    (IOPIN so.0);
+)

@@ -1,0 +1,44 @@
+-- VHDL data flow description generated from `semaforo_boom`
+--		date : Wed Nov 11 11:49:23 2020
+
+
+-- Entity Declaration
+
+ENTITY semaforo_boom IS
+  PORT (
+  clk : in BIT;	-- clk
+  rst : in BIT;	-- rst
+  roj : out BIT;	-- roj
+  ama : out BIT;	-- ama
+  ver : out BIT;	-- ver
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END semaforo_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF semaforo_boom IS
+  SIGNAL maquina : REG_VECTOR(0 TO 1) REGISTER;	-- maquina
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+
+BEGIN
+  aux1 <= (NOT(maquina(0)) AND NOT(maquina(1)));
+  aux0 <= (maquina(0) AND NOT(maquina(1)));
+  label0 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    maquina (1) <= GUARDED (aux0 AND NOT(rst));
+  END BLOCK label0;
+  label1 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    maquina (0) <= GUARDED (aux1 AND NOT(rst));
+  END BLOCK label1;
+
+ver <= aux0;
+
+ama <= (NOT(maquina(0)) AND maquina(1));
+
+roj <= aux1;
+END;

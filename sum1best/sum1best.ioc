@@ -1,0 +1,12 @@
+LEFT
+(
+    (IOPIN a.0);
+    (IOPIN b.0);
+    (IOPIN ci.0);
+)
+
+RIGHT
+(
+    (IOPIN co.0);
+    (IOPIN so.0);
+)

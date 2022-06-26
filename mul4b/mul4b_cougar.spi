@@ -1,0 +1,981 @@
+* Spice description of mul4b_cougar
+* Spice driver version -1209401692
+* Date ( dd/mm/yyyy hh:mm:ss ):  4/11/2020 at 11:13:59
+
+* INTERF vdd vss x[0] x[1] x[2] x[3] y[0] y[1] y[2] y[3] z[0] z[1] z[2] z[3] 
+* INTERF z[4] z[5] z[6] z[7] 
+
+
+.subckt mul4b_cougar vdd vss x[0] x[1] x[2] x[3] y[0] y[1] y[2] y[3] z[0] z[1] z[2] z[3] z[4] z[5] z[6] z[7] 
+Mtr_00712 u0.x1 sig3 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00711 vdd y[0] sig3 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00710 sig3 x[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00709 sig16 rtl_map_6 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00708 vdd rtl_map_7 sig13 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00707 u0.y0.xr2_x1_sig sig16 sig14 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00706 sig14 rtl_map_7 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00705 sig14 sig13 u0.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00704 vdd rtl_map_6 sig14 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00703 cx[0] sig8 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00702 sig9 rtl_map_7 sig7 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00701 sig9 rtl_map_6 vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00700 vdd rtl_map_7 sig9 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00699 sig7 rtl_map_6 sig8 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00698 sig8 u0.x1 sig9 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00697 sig18 u0.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00696 vdd u0.y0.xr2_x1_sig sig17 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00695 sx[0] sig18 sig19 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00694 sig19 u0.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00693 sig19 sig17 sx[0] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00692 vdd u0.x1 sig19 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00691 z[0] sig21 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00690 vdd sx[0] sig21 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00689 cx[1] sig25 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00688 sig71 rtl_map_5 sig72 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00687 sig71 cx[0] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00686 vdd rtl_map_5 sig71 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00685 sig72 cx[0] sig25 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00684 sig25 u1.x1 sig71 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00683 sig34 cx[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00682 vdd rtl_map_5 sig30 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00681 u1.y0.xr2_x1_sig sig34 sig73 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00680 sig73 rtl_map_5 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00679 sig73 sig30 u1.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00678 vdd cx[0] sig73 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00677 u4.x1 sig56 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00676 vdd y[1] sig56 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00675 sig56 x[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00674 sig38 u1.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00673 vdd u1.y0.xr2_x1_sig sig37 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00672 sx[1] sig38 sig74 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00671 sig74 u1.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00670 sig74 sig37 sx[1] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00669 vdd u1.x1 sig74 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00668 sig55 rtl_map_2 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00667 vdd sx[1] sig51 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00666 u4.y0.xr2_x1_sig sig55 sig77 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00665 sig77 sx[1] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00664 sig77 sig51 u4.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00663 vdd rtl_map_2 sig77 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00662 cx[4] sig44 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00661 sig76 sx[1] sig75 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00660 sig76 rtl_map_2 vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00659 vdd sx[1] sig76 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00658 sig75 rtl_map_2 sig44 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00657 sig44 u4.x1 sig76 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00656 sig65 u4.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00655 vdd u4.y0.xr2_x1_sig sig63 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00654 sx[4] sig65 sig78 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00653 sig78 u4.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00652 sig78 sig63 sx[4] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00651 vdd u4.x1 sig78 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00650 z[1] sig66 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00649 vdd sx[4] sig66 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00648 z[2] sig68 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00647 vdd sx[8] sig68 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00646 u1.x1 sig84 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00645 vdd y[0] sig84 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00644 sig84 x[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00643 sig82 cx[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00642 vdd rtl_map_4 sig79 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00641 u2.y0.xr2_x1_sig sig82 sig80 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00640 sig80 rtl_map_4 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00639 sig80 sig79 u2.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00638 vdd cx[1] sig80 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00637 sig94 u8.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00636 vdd u8.y0.xr2_x1_sig sig92 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00635 sx[8] sig94 sig93 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00634 sig93 u8.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00633 sig93 sig92 sx[8] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00632 vdd u8.x1 sig93 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00631 u8.x1 sig96 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00630 vdd y[2] sig96 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00629 sig96 x[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00628 sig89 rtl_map_1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00627 vdd sx[5] sig86 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00626 u8.y0.xr2_x1_sig sig89 sig91 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00625 sig91 sx[5] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00624 sig91 sig86 u8.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00623 vdd rtl_map_1 sig91 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00622 sig103 rtl_map_0 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00621 vdd sx[9] sig101 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00620 u12.y0.xr2_x1_sig sig103 sig99 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00619 sig99 sx[9] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00618 sig99 sig101 u12.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00617 vdd rtl_map_0 sig99 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00616 u12.x1 sig104 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00615 vdd y[3] sig104 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00614 sig104 x[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00613 cx[12] sig108 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00612 sig106 sx[9] sig109 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00611 sig106 rtl_map_0 vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00610 vdd sx[9] sig106 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00609 sig109 rtl_map_0 sig108 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00608 sig108 u12.x1 sig106 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00607 z[3] sig115 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00606 vdd sx[12] sig115 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00605 sig114 u12.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00604 vdd u12.y0.xr2_x1_sig sig111 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00603 sx[12] sig114 sig113 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00602 sig113 u12.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00601 sig113 sig111 sx[12] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00600 vdd u12.x1 sig113 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00599 cx[2] sig121 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00598 sig169 rtl_map_4 sig173 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00597 sig169 cx[1] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00596 vdd rtl_map_4 sig169 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00595 sig173 cx[1] sig121 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00594 sig121 u2.x1 sig169 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00593 sig127 u2.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00592 vdd u2.y0.xr2_x1_sig sig126 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00591 sx[2] sig127 sig174 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00590 sig174 u2.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00589 sig174 sig126 sx[2] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00588 vdd u2.x1 sig174 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00587 sig138 cx[4] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00586 vdd sx[2] sig139 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00585 u5.y0.xr2_x1_sig sig138 sig185 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00584 sig185 sx[2] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00583 sig185 sig139 u5.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00582 vdd cx[4] sig185 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00581 cx[5] sig133 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00580 sig182 sx[2] sig183 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00579 sig182 cx[4] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00578 vdd sx[2] sig182 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00577 sig183 cx[4] sig133 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00576 sig133 u5.x1 sig182 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00575 cx[8] sig130 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00574 sig176 sx[5] sig179 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00573 sig176 rtl_map_1 vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00572 vdd sx[5] sig176 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00571 sig179 rtl_map_1 sig130 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00570 sig130 u8.x1 sig176 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00569 u13.x1 sig154 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00568 vdd y[3] sig154 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00567 sig154 x[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00566 sig148 u5.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00565 vdd u5.y0.xr2_x1_sig sig145 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00564 sx[5] sig148 sig186 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00563 sig186 u5.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00562 sig186 sig145 sx[5] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00561 vdd u5.x1 sig186 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00560 u5.x1 sig153 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00559 vdd y[1] sig153 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00558 sig153 x[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00557 sig163 cx[12] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00556 vdd sx[10] sig159 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00555 u13.y0.xr2_x1_sig sig163 sig187 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00554 sig187 sx[10] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00553 sig187 sig159 u13.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00552 vdd cx[12] sig187 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00551 sig166 u13.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00550 vdd u13.y0.xr2_x1_sig sig167 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00549 sx[13] sig166 sig188 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00548 sig188 u13.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00547 sig188 sig167 sx[13] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00546 vdd u13.x1 sig188 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00545 sig200 u6.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00544 vdd u6.y0.xr2_x1_sig sig196 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00543 sx[6] sig200 sig197 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00542 sig197 u6.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00541 sig197 sig196 sx[6] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00540 vdd u6.x1 sig197 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00539 sig195 cx[5] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00538 vdd sx[3] sig191 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00537 u6.y0.xr2_x1_sig sig195 sig193 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00536 sig193 sx[3] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00535 sig193 sig191 u6.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00534 vdd cx[5] sig193 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00533 u2.x1 sig189 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00532 vdd y[0] sig189 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00531 sig189 x[2] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00530 sig202 cx[8] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00529 vdd sx[6] sig201 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00528 u9.y0.xr2_x1_sig sig202 sig204 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00527 sig204 sx[6] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00526 sig204 sig201 u9.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00525 vdd cx[8] sig204 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00524 sig212 u9.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00523 vdd u9.y0.xr2_x1_sig sig210 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00522 sx[9] sig212 sig213 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00521 sig213 u9.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00520 sig213 sig210 sx[9] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00519 vdd u9.x1 sig213 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00518 u9.x1 sig211 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00517 vdd y[2] sig211 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00516 sig211 x[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00515 cx[9] sig206 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00514 sig205 sx[6] sig208 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00513 sig205 cx[8] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00512 vdd sx[6] sig205 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00511 sig208 cx[8] sig206 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00510 sig206 u9.x1 sig205 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00509 sig222 cx[13] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00508 vdd sx[11] sig217 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00507 u14.y0.xr2_x1_sig sig222 sig219 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00506 sig219 sx[11] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00505 sig219 sig217 u14.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00504 vdd cx[13] sig219 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00503 z[4] sig224 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00502 vdd sx[13] sig224 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00501 cx[13] sig214 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00500 sig215 sx[10] sig218 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00499 sig215 cx[12] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00498 vdd sx[10] sig215 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00497 sig218 cx[12] sig214 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00496 sig214 u13.x1 sig215 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00495 sig227 u3.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00494 vdd u3.y0.xr2_x1_sig sig230 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00493 sx[3] sig227 sig265 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00492 sig265 u3.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00491 sig265 sig230 sx[3] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00490 vdd u3.x1 sig265 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00489 cx[6] sig270 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00488 sig272 sx[3] sig275 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00487 sig272 cx[5] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00486 vdd sx[3] sig272 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00485 sig275 cx[5] sig270 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00484 sig270 u6.x1 sig272 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00483 u6.x1 sig240 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00482 vdd y[1] sig240 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00481 sig240 x[2] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00480 sig245 cx[9] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00479 vdd sx[7] sig244 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00478 u10.y0.xr2_x1_sig sig245 sig278 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00477 sig278 sx[7] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00476 sig278 sig244 u10.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00475 vdd cx[9] sig278 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00474 sig233 cx[2] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00473 vdd rtl_map_3 sig235 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00472 u3.y0.xr2_x1_sig sig233 sig269 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00471 sig269 rtl_map_3 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00470 sig269 sig235 u3.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00469 vdd cx[2] sig269 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00468 u14.x1 sig256 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00467 vdd y[3] sig256 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00466 sig256 x[2] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00465 u10.x1 sig247 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00464 vdd y[2] sig247 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00463 sig247 x[2] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00462 sig255 u10.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00461 vdd u10.y0.xr2_x1_sig sig254 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00460 sx[10] sig255 sig282 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00459 sig282 u10.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00458 sig282 sig254 sx[10] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00457 vdd u10.x1 sig282 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00456 z[5] sig262 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00455 vdd sx[14] sig262 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00454 sig261 u14.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00453 vdd u14.y0.xr2_x1_sig sig260 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00452 sx[14] sig261 sig288 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00451 sig288 u14.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00450 sig288 sig260 sx[14] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00449 vdd u14.x1 sig288 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00448 u3.x1 sig291 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00447 vdd y[0] sig291 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00446 sig291 x[3] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00445 cx[3] sig294 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00444 sig290 rtl_map_3 sig293 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00443 sig290 cx[2] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00442 vdd rtl_map_3 sig290 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00441 sig293 cx[2] sig294 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00440 sig294 u3.x1 sig290 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00439 sig301 cx[10] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00438 vdd cx[7] sig295 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00437 u11.y0.xr2_x1_sig sig301 sig298 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00436 sig298 cx[7] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00435 sig298 sig295 u11.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00434 vdd cx[10] sig298 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00433 cx[11] sig302 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00432 sig303 cx[7] sig305 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00431 sig303 cx[10] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00430 vdd cx[7] sig303 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00429 sig305 cx[10] sig302 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00428 sig302 u11.x1 sig303 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00427 z[6] sig327 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00426 vdd sx[15] sig327 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00425 sig312 u11.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00424 vdd u11.y0.xr2_x1_sig sig311 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00423 sx[11] sig312 sig310 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00422 sig310 u11.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00421 sig310 sig311 sx[11] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00420 vdd u11.x1 sig310 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00419 cx[10] sig309 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00418 sig307 sx[7] sig308 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00417 sig307 cx[9] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00416 vdd sx[7] sig307 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00415 sig308 cx[9] sig309 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00414 sig309 u10.x1 sig307 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00413 sig318 u15.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00412 vdd u15.y0.xr2_x1_sig sig313 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00411 sx[15] sig318 sig314 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00410 sig314 u15.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00409 sig314 sig313 sx[15] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00408 vdd u15.x1 sig314 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00407 sig321 cx[14] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00406 vdd cx[11] sig319 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00405 u15.y0.xr2_x1_sig sig321 sig320 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00404 sig320 cx[11] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00403 sig320 sig319 u15.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00402 vdd cx[14] sig320 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00401 cx[14] sig325 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00400 sig322 sx[11] sig324 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00399 sig322 cx[13] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00398 vdd sx[11] sig322 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00397 sig324 cx[13] sig325 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00396 sig325 u14.x1 sig322 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00395 cx[7] sig352 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00394 sig374 cx[3] sig373 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00393 sig374 cx[6] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00392 vdd cx[3] sig374 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00391 sig373 cx[6] sig352 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00390 sig352 u7.x1 sig374 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00389 sig350 cx[6] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00388 vdd cx[3] sig346 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00387 u7.y0.xr2_x1_sig sig350 sig371 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00386 sig371 cx[3] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00385 sig371 sig346 u7.y0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00384 vdd cx[6] sig371 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00383 u7.x1 sig359 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00382 vdd y[1] sig359 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00381 sig359 x[3] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00380 sig357 u7.x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00379 vdd u7.y0.xr2_x1_sig sig356 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00378 sx[7] sig357 sig375 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00377 sig375 u7.y0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00376 sig375 sig356 sx[7] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00375 vdd u7.x1 sig375 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00374 u11.x1 sig361 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00373 vdd y[2] sig361 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00372 sig361 x[3] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00371 u15.x1 sig363 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00370 vdd y[3] sig363 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00369 sig363 x[3] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00368 cx[15] sig366 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00367 sig376 cx[11] sig377 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00366 sig376 cx[14] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00365 vdd cx[11] sig376 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00364 sig377 cx[14] sig366 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00363 sig366 u15.x1 sig376 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00362 z[7] sig369 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00361 vdd cx[15] sig369 vdd tp L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00360 vss vdd rtl_map_5 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00359 vss vdd rtl_map_7 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00358 sig3 x[0] sig28 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00357 vss sig3 u0.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00356 sig28 y[0] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00355 sig13 rtl_map_7 vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00354 vss rtl_map_6 sig16 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00353 sig54 sig16 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00352 u0.y0.xr2_x1_sig sig13 sig54 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00351 sig49 rtl_map_6 u0.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00350 vss rtl_map_7 sig49 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00349 vss sig8 cx[0] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00348 vss rtl_map_6 sig35 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00347 sig35 rtl_map_7 vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00346 sig8 rtl_map_6 sig36 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00345 sig36 rtl_map_7 vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00344 sig35 u0.x1 sig8 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00343 sig17 u0.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00342 vss u0.x1 sig18 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00341 sig59 sig18 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00340 sx[0] sig17 sig59 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00339 sig60 u0.x1 sx[0] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00338 vss u0.y0.xr2_x1_sig sig60 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00337 vss vdd rtl_map_6 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00336 vss sig21 z[0] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00335 sig21 sx[0] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00334 vss sig25 cx[1] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00333 vss cx[0] sig24 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00332 sig24 rtl_map_5 vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00331 sig25 cx[0] sig26 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00330 sig26 rtl_map_5 vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00329 sig24 u1.x1 sig25 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00328 sig30 rtl_map_5 vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00327 vss cx[0] sig34 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00326 sig31 sig34 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00325 u1.y0.xr2_x1_sig sig30 sig31 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00324 sig32 cx[0] u1.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00323 vss rtl_map_5 sig32 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00322 sig56 x[0] sig57 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00321 vss sig56 u4.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00320 sig57 y[1] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00319 vss vdd rtl_map_2 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00318 sig37 u1.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00317 vss u1.x1 sig38 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00316 sig40 sig38 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00315 sx[1] sig37 sig40 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00314 sig41 u1.x1 sx[1] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00313 vss u1.y0.xr2_x1_sig sig41 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00312 sig51 sx[1] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00311 vss rtl_map_2 sig55 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00310 sig50 sig55 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00309 u4.y0.xr2_x1_sig sig51 sig50 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00308 sig52 rtl_map_2 u4.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00307 vss sx[1] sig52 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00306 vss sig44 cx[4] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00305 vss rtl_map_2 sig45 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00304 sig45 sx[1] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00303 sig44 rtl_map_2 sig46 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00302 sig46 sx[1] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00301 sig45 u4.x1 sig44 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00300 sig63 u4.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00299 vss u4.x1 sig65 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00298 sig62 sig65 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00297 sx[4] sig63 sig62 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00296 sig64 u4.x1 sx[4] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00295 vss u4.y0.xr2_x1_sig sig64 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00294 vss sig66 z[1] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00293 sig66 sx[4] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00292 vss sig68 z[2] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00291 sig68 sx[8] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00290 sig84 x[1] sig120 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00289 vss sig84 u1.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00288 sig120 y[0] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00287 sig79 rtl_map_4 vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00286 vss cx[1] sig82 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00285 sig119 sig82 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00284 u2.y0.xr2_x1_sig sig79 sig119 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00283 sig118 cx[1] u2.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00282 vss rtl_map_4 sig118 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00281 vss vdd rtl_map_1 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00280 sig92 u8.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00279 vss u8.x1 sig94 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00278 sig131 sig94 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00277 sx[8] sig92 sig131 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00276 sig132 u8.x1 sx[8] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00275 vss u8.y0.xr2_x1_sig sig132 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00274 sig96 x[0] sig134 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00273 vss sig96 u8.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00272 sig134 y[2] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00271 sig86 sx[5] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00270 vss rtl_map_1 sig89 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00269 sig128 sig89 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00268 u8.y0.xr2_x1_sig sig86 sig128 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00267 sig129 rtl_map_1 u8.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00266 vss sx[5] sig129 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00265 vss vdd rtl_map_0 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00264 sig101 sx[9] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00263 vss rtl_map_0 sig103 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00262 sig140 sig103 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00261 u12.y0.xr2_x1_sig sig101 sig140 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00260 sig141 rtl_map_0 u12.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00259 vss sx[9] sig141 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00258 sig104 x[0] sig146 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00257 vss sig104 u12.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00256 sig146 y[3] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00255 vss sig108 cx[12] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00254 vss rtl_map_0 sig150 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00253 sig150 sx[9] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00252 sig108 rtl_map_0 sig149 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00251 sig149 sx[9] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00250 sig150 u12.x1 sig108 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00249 vss sig115 z[3] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00248 sig115 sx[12] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00247 sig111 u12.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00246 vss u12.x1 sig114 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00245 sig160 sig114 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00244 sx[12] sig111 sig160 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00243 sig161 u12.x1 sx[12] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00242 vss u12.y0.xr2_x1_sig sig161 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00241 vss sig121 cx[2] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00240 vss cx[1] sig171 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00239 sig171 rtl_map_4 vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00238 sig121 cx[1] sig168 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00237 sig168 rtl_map_4 vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00236 sig171 u2.x1 sig121 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00235 sig126 u2.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00234 vss u2.x1 sig127 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00233 sig124 sig127 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00232 sx[2] sig126 sig124 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00231 sig122 u2.x1 sx[2] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00230 vss u2.y0.xr2_x1_sig sig122 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00229 vss vdd rtl_map_4 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00228 sig139 sx[2] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00227 vss cx[4] sig138 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00226 sig135 sig138 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00225 u5.y0.xr2_x1_sig sig139 sig135 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00224 sig136 cx[4] u5.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00223 vss sx[2] sig136 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00222 vss sig133 cx[5] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00221 vss cx[4] sig180 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00220 sig180 sx[2] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00219 sig133 cx[4] sig181 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00218 sig181 sx[2] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00217 sig180 u5.x1 sig133 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00216 vss sig130 cx[8] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00215 vss rtl_map_1 sig177 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00214 sig177 sx[5] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00213 sig130 rtl_map_1 sig175 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00212 sig175 sx[5] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00211 sig177 u8.x1 sig130 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00210 sig154 x[1] sig152 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00209 vss sig154 u13.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00208 sig152 y[3] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00207 sig145 u5.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00206 vss u5.x1 sig148 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00205 sig143 sig148 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00204 sx[5] sig145 sig143 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00203 sig142 u5.x1 sx[5] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00202 vss u5.y0.xr2_x1_sig sig142 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00201 sig153 x[1] sig147 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00200 vss sig153 u5.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00199 sig147 y[1] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00198 sig159 sx[10] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00197 vss cx[12] sig163 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00196 sig156 sig163 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00195 u13.y0.xr2_x1_sig sig159 sig156 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00194 sig157 cx[12] u13.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00193 vss sx[10] sig157 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00192 sig167 u13.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00191 vss u13.x1 sig166 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00190 sig165 sig166 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00189 sx[13] sig167 sig165 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00188 sig162 u13.x1 sx[13] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00187 vss u13.y0.xr2_x1_sig sig162 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00186 sig196 u6.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00185 vss u6.x1 sig200 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00184 sig237 sig200 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00183 sx[6] sig196 sig237 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00182 sig236 u6.x1 sx[6] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00181 vss u6.y0.xr2_x1_sig sig236 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00180 sig191 sx[3] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00179 vss cx[5] sig195 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00178 sig231 sig195 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00177 u6.y0.xr2_x1_sig sig191 sig231 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00176 sig232 cx[5] u6.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00175 vss sx[3] sig232 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00174 sig189 x[2] sig225 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00173 vss sig189 u2.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00172 sig225 y[0] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00171 sig201 sx[6] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00170 vss cx[8] sig202 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00169 sig238 sig202 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00168 u9.y0.xr2_x1_sig sig201 sig238 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00167 sig239 cx[8] u9.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00166 vss sx[6] sig239 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00165 sig210 u9.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00164 vss u9.x1 sig212 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00163 sig249 sig212 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00162 sx[9] sig210 sig249 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00161 sig248 u9.x1 sx[9] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00160 vss u9.y0.xr2_x1_sig sig248 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00159 sig211 x[1] sig246 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00158 vss sig211 u9.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00157 sig246 y[2] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00156 vss sig206 cx[9] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00155 vss cx[8] sig242 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00154 sig242 sx[6] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00153 sig206 cx[8] sig241 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00152 sig241 sx[6] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00151 sig242 u9.x1 sig206 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00150 sig217 sx[11] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00149 vss cx[13] sig222 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00148 sig258 sig222 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00147 u14.y0.xr2_x1_sig sig217 sig258 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00146 sig257 cx[13] u14.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00145 vss sx[11] sig257 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00144 vss sig224 z[4] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00143 sig224 sx[13] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00142 vss sig214 cx[13] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00141 vss cx[12] sig253 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00140 sig253 sx[10] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00139 sig214 cx[12] sig252 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00138 sig252 sx[10] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00137 sig253 u13.x1 sig214 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00136 sig230 u3.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00135 vss u3.x1 sig227 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00134 sig263 sig227 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00133 sx[3] sig230 sig263 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00132 sig264 u3.x1 sx[3] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00131 vss u3.y0.xr2_x1_sig sig264 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00130 vss sig270 cx[6] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00129 vss cx[5] sig273 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00128 sig273 sx[3] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00127 sig270 cx[5] sig271 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00126 sig271 sx[3] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00125 sig273 u6.x1 sig270 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00124 sig240 x[2] sig276 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00123 vss sig240 u6.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00122 sig276 y[1] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00121 sig244 sx[7] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00120 vss cx[9] sig245 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00119 sig279 sig245 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00118 u10.y0.xr2_x1_sig sig244 sig279 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00117 sig277 cx[9] u10.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00116 vss sx[7] sig277 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00115 sig235 rtl_map_3 vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00114 vss cx[2] sig233 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00113 sig268 sig233 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00112 u3.y0.xr2_x1_sig sig235 sig268 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00111 sig267 cx[2] u3.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00110 vss rtl_map_3 sig267 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00109 sig256 x[2] sig284 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00108 vss sig256 u14.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00107 sig284 y[3] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00106 sig247 x[2] sig280 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00105 vss sig247 u10.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00104 sig280 y[2] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00103 sig254 u10.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00102 vss u10.x1 sig255 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00101 sig283 sig255 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00100 sx[10] sig254 sig283 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00099 sig281 u10.x1 sx[10] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00098 vss u10.y0.xr2_x1_sig sig281 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00097 vss sig262 z[5] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00096 sig262 sx[14] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00095 sig260 u14.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00094 vss u14.x1 sig261 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00093 sig287 sig261 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00092 sx[14] sig260 sig287 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00091 sig285 u14.x1 sx[14] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00090 vss u14.y0.xr2_x1_sig sig285 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00089 sig291 x[3] sig329 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00088 vss sig291 u3.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00087 sig329 y[0] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00086 vss sig294 cx[3] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00085 vss cx[2] sig330 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00084 sig330 rtl_map_3 vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00083 sig294 cx[2] sig331 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00082 sig331 rtl_map_3 vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00081 sig330 u3.x1 sig294 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00080 vss vdd rtl_map_3 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00079 sig295 cx[7] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00078 vss cx[10] sig301 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00077 sig333 sig301 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00076 u11.y0.xr2_x1_sig sig295 sig333 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00075 sig332 cx[10] u11.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00074 vss cx[7] sig332 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00073 vss sig302 cx[11] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00072 vss cx[10] sig335 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00071 sig335 cx[7] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00070 sig302 cx[10] sig334 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00069 sig334 cx[7] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00068 sig335 u11.x1 sig302 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00067 vss sig327 z[6] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00066 sig327 sx[15] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+Mtr_00065 sig311 u11.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00064 vss u11.x1 sig312 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00063 sig339 sig312 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00062 sx[11] sig311 sig339 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00061 sig338 u11.x1 sx[11] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00060 vss u11.y0.xr2_x1_sig sig338 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00059 vss sig309 cx[10] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00058 vss cx[9] sig336 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00057 sig336 sx[7] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00056 sig309 cx[9] sig337 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00055 sig337 sx[7] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00054 sig336 u10.x1 sig309 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00053 sig313 u15.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00052 vss u15.x1 sig318 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00051 sig341 sig318 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00050 sx[15] sig313 sig341 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00049 sig340 u15.x1 sx[15] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00048 vss u15.y0.xr2_x1_sig sig340 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00047 sig319 cx[11] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00046 vss cx[14] sig321 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00045 sig343 sig321 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00044 u15.y0.xr2_x1_sig sig319 sig343 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00043 sig342 cx[14] u15.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00042 vss cx[11] sig342 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00041 vss sig325 cx[14] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00040 vss cx[13] sig345 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00039 sig345 sx[11] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00038 sig325 cx[13] sig344 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00037 sig344 sx[11] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00036 sig345 u14.x1 sig325 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00035 vss sig352 cx[7] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00034 vss cx[6] sig351 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00033 sig351 cx[3] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00032 sig352 cx[6] sig353 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00031 sig353 cx[3] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00030 sig351 u7.x1 sig352 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00029 sig346 cx[3] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00028 vss cx[6] sig350 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00027 sig349 sig350 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00026 u7.y0.xr2_x1_sig sig346 sig349 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00025 sig347 cx[6] u7.y0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00024 vss cx[3] sig347 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00023 sig359 x[3] sig360 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00022 vss sig359 u7.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00021 sig360 y[1] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00020 sig356 u7.y0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00019 vss u7.x1 sig357 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00018 sig358 sig357 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00017 sx[7] sig356 sig358 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00016 sig355 u7.x1 sx[7] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00015 vss u7.y0.xr2_x1_sig sig355 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00014 sig361 x[3] sig362 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00013 vss sig361 u11.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00012 sig362 y[2] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00011 sig363 x[3] sig364 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00010 vss sig363 u15.x1 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00009 sig364 y[3] vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00008 vss sig366 cx[15] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00007 vss cx[14] sig367 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00006 sig367 cx[11] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00005 sig366 cx[14] sig365 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00004 sig365 cx[11] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00003 sig367 u15.x1 sig366 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00002 vss sig369 z[7] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00001 sig369 cx[15] vss vss tn L=1U W=3U AS=6P AD=6P PS=10U PD=10U 
+C376 sig376 vss 8.58e-15
+C375 sig375 vss 9.7e-15
+C374 sig374 vss 8.58e-15
+C371 sig371 vss 9.7e-15
+C370 z[7] vss 2.779e-14
+C369 sig369 vss 1.568e-14
+C368 cx[15] vss 5.573e-14
+C367 sig367 vss 4.11e-15
+C366 sig366 vss 2.299e-14
+C363 sig363 vss 1.8635e-14
+C361 sig361 vss 1.8635e-14
+C359 sig359 vss 1.8635e-14
+C357 sig357 vss 2.596e-14
+C356 sig356 vss 2.16e-14
+C354 u7.x1 vss 1.0981e-13
+C352 sig352 vss 2.299e-14
+C351 sig351 vss 4.11e-15
+C350 sig350 vss 2.596e-14
+C348 u7.y0.xr2_x1_sig vss 8.031e-14
+C346 sig346 vss 2.16e-14
+C345 sig345 vss 4.11e-15
+C336 sig336 vss 4.11e-15
+C335 sig335 vss 4.11e-15
+C330 sig330 vss 4.11e-15
+C327 sig327 vss 1.568e-14
+C326 z[6] vss 2.371e-14
+C325 sig325 vss 2.299e-14
+C323 cx[14] vss 1.1024e-13
+C322 sig322 vss 8.58e-15
+C321 sig321 vss 2.596e-14
+C320 sig320 vss 9.7e-15
+C319 sig319 vss 2.16e-14
+C318 sig318 vss 2.596e-14
+C317 u15.y0.xr2_x1_sig vss 6.111e-14
+C316 u15.x1 vss 9.157e-14
+C315 sx[15] vss 8.427e-14
+C314 sig314 vss 9.7e-15
+C313 sig313 vss 2.16e-14
+C312 sig312 vss 2.596e-14
+C311 sig311 vss 2.16e-14
+C310 sig310 vss 9.7e-15
+C309 sig309 vss 2.299e-14
+C307 sig307 vss 8.58e-15
+C306 cx[11] vss 1.4683e-13
+C304 u11.x1 vss 1.0997e-13
+C303 sig303 vss 8.58e-15
+C302 sig302 vss 2.299e-14
+C301 sig301 vss 2.596e-14
+C300 cx[7] vss 1.1355e-13
+C299 cx[10] vss 1.1656e-13
+C298 sig298 vss 9.7e-15
+C297 u11.y0.xr2_x1_sig vss 8.679e-14
+C296 cx[3] vss 1.1355e-13
+C295 sig295 vss 2.16e-14
+C294 sig294 vss 2.299e-14
+C292 x[3] vss 1.4815e-13
+C291 sig291 vss 1.8635e-14
+C290 sig290 vss 8.58e-15
+C289 z[5] vss 2.371e-14
+C288 sig288 vss 9.7e-15
+C286 sx[14] vss 5.619e-14
+C282 sig282 vss 9.7e-15
+C278 sig278 vss 9.7e-15
+C274 cx[6] vss 1.4464e-13
+C273 sig273 vss 4.11e-15
+C272 sig272 vss 8.58e-15
+C270 sig270 vss 2.299e-14
+C269 sig269 vss 9.7e-15
+C265 sig265 vss 9.7e-15
+C262 sig262 vss 1.568e-14
+C261 sig261 vss 2.596e-14
+C260 sig260 vss 2.16e-14
+C259 u14.x1 vss 9.557e-14
+C256 sig256 vss 1.8635e-14
+C255 sig255 vss 2.596e-14
+C254 sig254 vss 2.16e-14
+C253 sig253 vss 4.11e-15
+C251 u10.x1 vss 1.1765e-13
+C250 u10.y0.xr2_x1_sig vss 6.831e-14
+C247 sig247 vss 1.8635e-14
+C245 sig245 vss 2.596e-14
+C244 sig244 vss 2.16e-14
+C243 sx[7] vss 1.2625e-13
+C242 sig242 vss 4.11e-15
+C240 sig240 vss 1.8635e-14
+C235 sig235 vss 2.16e-14
+C234 rtl_map_3 vss 1.0163e-13
+C233 sig233 vss 2.596e-14
+C230 sig230 vss 2.16e-14
+C229 u3.x1 vss 8.189e-14
+C228 u3.y0.xr2_x1_sig vss 6.351e-14
+C227 sig227 vss 2.596e-14
+C224 sig224 vss 1.568e-14
+C223 z[4] vss 2.371e-14
+C222 sig222 vss 2.596e-14
+C221 sx[11] vss 1.4689e-13
+C220 u14.y0.xr2_x1_sig vss 5.751e-14
+C219 sig219 vss 9.7e-15
+C217 sig217 vss 2.16e-14
+C216 cx[13] vss 1.2704e-13
+C215 sig215 vss 8.58e-15
+C214 sig214 vss 2.299e-14
+C213 sig213 vss 9.7e-15
+C212 sig212 vss 2.596e-14
+C211 sig211 vss 1.8635e-14
+C210 sig210 vss 2.16e-14
+C209 cx[9] vss 1.208e-13
+C207 u9.x1 vss 9.829e-14
+C206 sig206 vss 2.299e-14
+C205 sig205 vss 8.58e-15
+C204 sig204 vss 9.7e-15
+C203 u9.y0.xr2_x1_sig vss 7.911e-14
+C202 sig202 vss 2.596e-14
+C201 sig201 vss 2.16e-14
+C200 sig200 vss 2.596e-14
+C199 u6.x1 vss 9.389e-14
+C198 sx[6] vss 1.1609e-13
+C197 sig197 vss 9.7e-15
+C196 sig196 vss 2.16e-14
+C195 sig195 vss 2.596e-14
+C194 sx[3] vss 1.1993e-13
+C193 sig193 vss 9.7e-15
+C192 u6.y0.xr2_x1_sig vss 5.991e-14
+C191 sig191 vss 2.16e-14
+C190 x[2] vss 1.6591e-13
+C189 sig189 vss 1.8635e-14
+C188 sig188 vss 9.7e-15
+C187 sig187 vss 9.7e-15
+C186 sig186 vss 9.7e-15
+C185 sig185 vss 9.7e-15
+C184 cx[5] vss 1.5664e-13
+C182 sig182 vss 8.58e-15
+C180 sig180 vss 4.11e-15
+C178 cx[8] vss 1.1704e-13
+C177 sig177 vss 4.11e-15
+C176 sig176 vss 8.58e-15
+C174 sig174 vss 9.7e-15
+C172 cx[2] vss 1.412e-13
+C171 sig171 vss 4.11e-15
+C169 sig169 vss 8.58e-15
+C167 sig167 vss 2.16e-14
+C166 sig166 vss 2.596e-14
+C164 sx[13] vss 5.979e-14
+C163 sig163 vss 2.596e-14
+C159 sig159 vss 2.16e-14
+C158 sx[10] vss 1.1561e-13
+C155 u13.y0.xr2_x1_sig vss 5.751e-14
+C154 sig154 vss 1.8635e-14
+C153 sig153 vss 1.8635e-14
+C151 u13.x1 vss 9.917e-14
+C150 sig150 vss 4.11e-15
+C148 sig148 vss 2.596e-14
+C145 sig145 vss 2.16e-14
+C144 u5.x1 vss 1.0981e-13
+C139 sig139 vss 2.16e-14
+C138 sig138 vss 2.596e-14
+C137 u5.y0.xr2_x1_sig vss 5.751e-14
+C133 sig133 vss 2.299e-14
+C130 sig130 vss 2.299e-14
+C127 sig127 vss 2.596e-14
+C126 sig126 vss 2.16e-14
+C125 u2.x1 vss 9.629e-14
+C123 sx[2] vss 1.2073e-13
+C121 sig121 vss 2.299e-14
+C116 z[3] vss 3.259e-14
+C115 sig115 vss 1.568e-14
+C114 sig114 vss 2.596e-14
+C113 sig113 vss 9.7e-15
+C112 sx[12] vss 5.619e-14
+C111 sig111 vss 2.16e-14
+C110 cx[12] vss 1.244e-13
+C108 sig108 vss 2.299e-14
+C107 u12.x1 vss 9.605e-14
+C106 sig106 vss 8.58e-15
+C105 y[3] vss 2.1412e-13
+C104 sig104 vss 1.8635e-14
+C103 sig103 vss 2.596e-14
+C102 sx[9] vss 1.2593e-13
+C101 sig101 vss 2.16e-14
+C100 u12.y0.xr2_x1_sig vss 7.671e-14
+C99 sig99 vss 9.7e-15
+C98 rtl_map_0 vss 1.1264e-13
+C97 y[2] vss 1.9972e-13
+C96 sig96 vss 1.8635e-14
+C95 u8.x1 vss 1.1237e-13
+C94 sig94 vss 2.596e-14
+C93 sig93 vss 9.7e-15
+C92 sig92 vss 2.16e-14
+C91 sig91 vss 9.7e-15
+C90 u8.y0.xr2_x1_sig vss 5.751e-14
+C89 sig89 vss 2.596e-14
+C88 rtl_map_1 vss 1.116e-13
+C87 sx[5] vss 1.4113e-13
+C86 sig86 vss 2.16e-14
+C85 x[1] vss 1.8967e-13
+C84 sig84 vss 1.8635e-14
+C83 rtl_map_4 vss 1.0123e-13
+C82 sig82 vss 2.596e-14
+C81 u2.y0.xr2_x1_sig vss 6.999e-14
+C80 sig80 vss 9.7e-15
+C79 sig79 vss 2.16e-14
+C78 sig78 vss 9.7e-15
+C77 sig77 vss 9.7e-15
+C76 sig76 vss 8.58e-15
+C74 sig74 vss 9.7e-15
+C73 sig73 vss 9.7e-15
+C71 sig71 vss 8.58e-15
+C70 sx[8] vss 1.1667e-13
+C69 z[2] vss 3.259e-14
+C68 sig68 vss 1.568e-14
+C67 z[1] vss 2.899e-14
+C66 sig66 vss 1.568e-14
+C65 sig65 vss 2.596e-14
+C63 sig63 vss 2.16e-14
+C61 sx[4] vss 5.859e-14
+C58 y[1] vss 2.4772e-13
+C56 sig56 vss 1.8635e-14
+C55 sig55 vss 2.596e-14
+C53 u4.y0.xr2_x1_sig vss 6.831e-14
+C51 sig51 vss 2.16e-14
+C48 cx[4] vss 1.2536e-13
+C47 u4.x1 vss 1.1581e-13
+C45 sig45 vss 4.11e-15
+C44 sig44 vss 2.299e-14
+C43 rtl_map_2 vss 1.0872e-13
+C39 sx[1] vss 1.1393e-13
+C38 sig38 vss 2.596e-14
+C37 sig37 vss 2.16e-14
+C35 sig35 vss 4.11e-15
+C34 sig34 vss 2.596e-14
+C33 u1.y0.xr2_x1_sig vss 5.991e-14
+C30 sig30 vss 2.16e-14
+C29 cx[1] vss 1.136e-13
+C27 u1.x1 vss 1.0949e-13
+C25 sig25 vss 2.299e-14
+C24 sig24 vss 4.11e-15
+C23 vss vss 4.20581e-12
+C22 z[0] vss 2.899e-14
+C21 sig21 vss 1.568e-14
+C20 sx[0] vss 6.099e-14
+C19 sig19 vss 9.7e-15
+C18 sig18 vss 2.596e-14
+C17 sig17 vss 2.16e-14
+C16 sig16 vss 2.596e-14
+C15 u0.y0.xr2_x1_sig vss 6.471e-14
+C14 sig14 vss 9.7e-15
+C13 sig13 vss 2.16e-14
+C12 cx[0] vss 1.3072e-13
+C11 rtl_map_7 vss 1.2475e-13
+C10 rtl_map_6 vss 1.2672e-13
+C9 sig9 vss 8.58e-15
+C8 sig8 vss 2.299e-14
+C6 u0.x1 vss 1.4765e-13
+C5 y[0] vss 2.2732e-13
+C4 x[0] vss 1.8463e-13
+C3 sig3 vss 1.8635e-14
+C2 rtl_map_5 vss 1.0595e-13
+C1 vdd vss 4.38752e-12
+.ends mul4b_cougar
+

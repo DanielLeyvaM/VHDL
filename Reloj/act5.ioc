@@ -1,0 +1,26 @@
+LEFT
+(
+    (IOPIN clk.0); 
+    (IOPIN rst.0); 
+    (IOPIN ctrl.0); 
+    (IOPIN ctrl1.0); 
+)
+RIGHT
+(
+    (IOPIN um(0).0);
+    (IOPIN um(1).0);
+    (IOPIN um(2).0);
+    (IOPIN um(3).0);
+    (IOPIN dm(0).0);
+    (IOPIN dm(1).0);
+    (IOPIN dm(2).0);
+    (IOPIN dm(3).0);
+    (IOPIN uh(0).0);
+    (IOPIN uh(1).0);
+    (IOPIN uh(2).0);
+    (IOPIN uh(3).0);
+    (IOPIN dh(0).0);
+    (IOPIN dh(1).0);
+    (IOPIN dh(2).0);
+    (IOPIN dh(3).0);
+)

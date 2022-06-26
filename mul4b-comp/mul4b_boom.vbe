@@ -1,0 +1,169 @@
+-- VHDL data flow description generated from `mul4b_boom`
+--		date : Wed Oct 28 15:20:30 2020
+
+
+-- Entity Declaration
+
+ENTITY mul4b_boom IS
+  PORT (
+  x : in bit_vector(3 DOWNTO 0) ;	-- x
+  y : in bit_vector(3 DOWNTO 0) ;	-- y
+  z : out bit_vector(7 DOWNTO 0) ;	-- z
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END mul4b_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF mul4b_boom IS
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux2 : BIT;		-- aux2
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux5 : BIT;		-- aux5
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux7 : BIT;		-- aux7
+  SIGNAL aux8 : BIT;		-- aux8
+  SIGNAL aux9 : BIT;		-- aux9
+  SIGNAL aux10 : BIT;		-- aux10
+  SIGNAL aux11 : BIT;		-- aux11
+  SIGNAL aux12 : BIT;		-- aux12
+  SIGNAL aux13 : BIT;		-- aux13
+  SIGNAL aux15 : BIT;		-- aux15
+  SIGNAL aux16 : BIT;		-- aux16
+  SIGNAL aux17 : BIT;		-- aux17
+  SIGNAL aux18 : BIT;		-- aux18
+  SIGNAL aux20 : BIT;		-- aux20
+  SIGNAL aux21 : BIT;		-- aux21
+  SIGNAL aux22 : BIT;		-- aux22
+  SIGNAL aux23 : BIT;		-- aux23
+  SIGNAL aux24 : BIT;		-- aux24
+  SIGNAL aux25 : BIT;		-- aux25
+  SIGNAL aux27 : BIT;		-- aux27
+  SIGNAL aux28 : BIT;		-- aux28
+  SIGNAL aux30 : BIT;		-- aux30
+  SIGNAL aux31 : BIT;		-- aux31
+  SIGNAL aux32 : BIT;		-- aux32
+  SIGNAL aux33 : BIT;		-- aux33
+  SIGNAL aux38 : BIT;		-- aux38
+  SIGNAL aux39 : BIT;		-- aux39
+  SIGNAL aux40 : BIT;		-- aux40
+  SIGNAL aux41 : BIT;		-- aux41
+  SIGNAL aux42 : BIT;		-- aux42
+  SIGNAL aux43 : BIT;		-- aux43
+  SIGNAL aux44 : BIT;		-- aux44
+  SIGNAL aux45 : BIT;		-- aux45
+  SIGNAL aux46 : BIT;		-- aux46
+  SIGNAL aux47 : BIT;		-- aux47
+
+BEGIN
+  aux47 <= NOT(aux0 AND NOT(x(1)));
+  aux46 <= (x(3) AND NOT(x(2)));
+  aux45 <= (y(3) AND NOT(x(3)));
+  aux44 <= (aux4 AND aux41);
+  aux43 <= (y(1) AND x(3));
+  aux42 <= (y(1) AND NOT(x(1)));
+  aux41 <= (x(1) AND NOT(x(3)));
+  aux40 <= (aux10 AND NOT(y(1)));
+  aux39 <= NOT(NOT(x(0)) AND NOT(y(1)));
+  aux38 <= (((y(2) AND aux12) AND y(1)) OR ((NOT(aux6) AND 
+aux10) AND NOT(y(1))));
+  aux33 <= (aux20 AND y(1));
+  aux32 <= (y(2) OR y(1));
+  aux31 <= (aux21 AND NOT(y(1)));
+  aux30 <= ((aux28 AND y(3)) AND NOT(x(1)));
+  aux28 <= (NOT(y(2)) OR aux0);
+  aux27 <= (aux4 OR (aux10 AND NOT(x(0))));
+  aux25 <= (aux22 OR aux6);
+  aux24 <= (aux23 AND NOT(y(1)));
+  aux23 <= (y(2) AND NOT(aux4));
+  aux22 <= (aux21 AND x(0));
+  aux21 <= (NOT(y(2)) AND y(3));
+  aux20 <= ((y(2) AND NOT(y(3))) AND x(0));
+  aux18 <= NOT(NOT(aux2) OR aux10);
+  aux17 <= (y(2) AND NOT(y(1)));
+  aux16 <= (aux15 AND NOT(y(1)));
+  aux15 <= (aux2 AND y(3));
+  aux13 <= NOT(aux11 OR NOT(aux12));
+  aux12 <= NOT(y(3) AND NOT(x(0)));
+  aux11 <= (aux10 AND x(0));
+  aux10 <= (y(2) XOR y(3));
+  aux9 <= (aux8 AND NOT(y(1)));
+  aux8 <= (y(2) XOR aux4);
+  aux7 <= (aux4 OR aux6);
+  aux6 <= (y(2) AND NOT(x(0)));
+  aux5 <= (aux4 AND NOT(x(1)));
+  aux4 <= (y(3) AND x(0));
+  aux3 <= (y(2) OR NOT(x(0)));
+  aux2 <= NOT(y(2) AND x(0));
+  aux1 <= (y(1) AND x(1));
+  aux0 <= NOT(x(0) AND y(1));
+
+z (0) <= (x(0) AND y(0));
+
+z (1) <= (NOT(aux0) XOR (x(1) AND y(0)));
+
+z (2) <= (((((x(0) OR aux1) AND aux3) XOR x(2)) AND y(0)) 
+OR ((NOT(aux2) XOR aux1) AND NOT(y(0))));
+
+z (3) <= (((((((aux7 AND x(1)) OR ((aux11 XOR y(1)) AND 
+NOT(x(1)))) XOR x(3)) AND x(2)) OR (((((((y(2) XOR (
+NOT(y(3)) AND x(0))) AND y(1)) OR aux9) AND x(1)) OR
+ aux5) XOR x(3)) AND NOT(x(2)))) AND y(0)) OR (((
+aux9 AND x(1)) OR (aux4 AND NOT(y(1)) AND NOT(x(1))) 
+OR ((NOT(aux6) OR NOT(x(1))) AND NOT(aux4) AND y(1)
+ AND x(2)) OR (((aux7 AND y(1) AND x(1)) OR aux5) 
+AND NOT(x(2)))) AND NOT(y(0))));
+
+z (4) <= ((((((((NOT(aux12) AND x(1)) OR (((aux23 AND y(1)
+) OR (aux25 AND NOT(y(1)))) AND NOT(x(1)))) AND 
+x(3)) OR ((((aux27 XOR y(1)) AND x(1)) OR (((aux25 
+AND y(1)) OR aux24) AND NOT(x(1)))) AND NOT(x(3)))) 
+AND x(2)) OR ((((((((aux22 OR (NOT(aux10) AND NOT(
+x(0)))) AND y(1)) OR (aux3 AND aux40)) AND x(1)) OR (
+(aux4 XOR y(1)) AND NOT(x(1)))) AND x(3)) OR ((((
+aux20 OR NOT(aux12)) AND y(1)) OR aux16) AND aux41)) 
+AND NOT(x(2)))) AND y(0)) OR (((((NOT(aux18) AND NOT
+(y(1)) AND x(1)) OR (aux17 AND NOT(x(1))) OR (((
+aux12 AND y(1) AND x(1)) OR (NOT(aux8) AND aux42)) AND
+ x(3)) OR (((NOT(aux12) AND y(1) AND x(1)) OR (
+aux8 AND aux42)) AND NOT(x(3)))) AND x(2)) OR (((
+aux16 AND x(1)) OR ((aux13 OR NOT(x(1))) AND aux43) OR
+ (NOT(aux13) AND y(1) AND aux41)) AND NOT(x(2)))) 
+AND NOT(y(0))));
+
+z (5) <= (((((((((NOT(aux12) XOR y(1)) AND x(1)) OR (((
+aux18 AND y(1)) OR (aux27 AND NOT(y(1)))) AND NOT(x(1)
+))) AND x(3)) OR (((aux38 AND x(1)) OR ((aux33 OR 
+aux15) AND NOT(x(1)))) AND NOT(x(3)))) AND x(2)) OR ((
+(((((((NOT(y(2)) AND NOT(NOT(y(3)) AND NOT(x(0))))
+ OR aux4) AND y(1)) OR ((y(2) OR x(0)) AND aux40))
+ AND x(1)) OR ((y(2) XOR (aux4 AND y(1))) AND NOT(
+x(1)))) AND x(3)) OR (aux32 AND aux44)) AND NOT(x(2))
+)) AND y(0)) OR ((((((aux40 OR (aux17 AND x(1)) OR
+ (aux3 AND y(3) AND aux42)) AND x(3)) OR (((((NOT(
+y(2) XOR aux12) AND y(1)) OR aux31) AND x(1)) OR 
+aux30) AND NOT(x(3)))) AND x(2)) OR (((((((aux2 AND 
+aux10 AND y(1)) OR aux24) AND x(1)) OR (y(2) AND NOT(
+x(1)))) AND x(3)) OR (y(2) AND aux44)) AND NOT(x(2)))
+) AND NOT(y(0))));
+
+z (6) <= ((((((((NOT(y(2) XOR (aux12 OR y(1))) AND x(1)) 
+OR (aux38 AND NOT(x(1)))) AND x(3)) OR ((NOT(aux2) 
+OR x(1)) AND aux32 AND aux45)) AND x(2)) OR (((NOT(
+aux17) AND aux10 AND x(1)) OR aux30) AND aux46)) AND 
+y(0)) OR ((((((aux33 OR aux31) AND x(1)) OR (aux21 
+AND NOT(aux47))) AND x(3)) OR ((((NOT(y(3)) OR x(1))
+ AND y(2) AND aux43) OR ((NOT(aux28) OR x(1)) AND 
+(y(2) OR NOT(aux0)) AND aux45)) AND x(2)) OR (((
+NOT(y(2)) AND y(1)) OR NOT(aux39) OR NOT(x(1))) AND 
+y(3) AND aux46)) AND NOT(y(0))));
+
+z (7) <= ((aux1 OR ((((x(0) OR NOT(y(1))) AND NOT(x(1))) 
+OR y(2)) AND x(2)) OR (x(0) AND x(1) AND NOT(x(2)))
+ OR y(0)) AND ((aux47 AND y(2)) OR x(2)) AND (
+aux32 OR x(1)) AND (y(2) OR aux39) AND y(3) AND x(3));
+END;

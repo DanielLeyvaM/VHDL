@@ -1,0 +1,72 @@
+entity sum1b is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      ci  : in      bit;
+      so  : out     bit;
+      co  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end sum1b;
+
+architecture structural of sum1b is
+Component oa2ao222_x2
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      i2  : in      bit;
+      i3  : in      bit;
+      i4  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component xr2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal xr2_x1_sig : bit;
+
+begin
+
+co_ins : oa2ao222_x2
+   port map (
+      i0  => ci,
+      i1  => a,
+      i2  => a,
+      i3  => ci,
+      i4  => b,
+      q   => co,
+      vdd => vdd,
+      vss => vss
+   );
+
+xr2_x1_ins : xr2_x1
+   port map (
+      i0  => ci,
+      i1  => a,
+      q   => xr2_x1_sig,
+      vdd => vdd,
+      vss => vss
+   );
+
+so_ins : xr2_x1
+   port map (
+      i0  => xr2_x1_sig,
+      i1  => b,
+      q   => so,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+end structural;

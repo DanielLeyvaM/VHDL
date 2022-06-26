@@ -1,0 +1,32 @@
+N:aux1:-1:379 ps
+N:aux2:-1:377 ps
+N:inv_x2_sig:-1:491 ps
+N:not_aux0:-1:355 ps
+N:x 0:-1:0 ps
+N:x 1:-1:0 ps
+N:y 0:-1:0 ps
+N:y 1:-1:0 ps
+N:z 0:-1:755 ps
+N:z 1:-1:735 ps
+N:z 2:-1:896 ps
+N:z 3:-1:701 ps
+B:z_3_ins:-1:701 ps
+B:z_2_ins:32:896 ps
+B:inv_x2_ins:32:491 ps
+B:z_1_ins:-1:735 ps
+B:z_0_ins:-1:755 ps
+B:aux1_ins:-1:379 ps
+B:aux2_ins:-1:377 ps
+B:not_aux0_ins:32:355 ps
+C:z 0:-1:755 ps
+C:z 1:-1:735 ps
+C:z 2:32:896 ps
+C:z 3:-1:701 ps
+C:y 0:32:0 ps
+C:y 1:-1:0 ps
+C:x 0:-1:0 ps
+C:x 1:-1:0 ps
+P:y 0:y 0:not_aux0_ins:32:355 ps
+P:not_aux0_ins:not_aux0:inv_x2_ins:32:355 ps
+P:inv_x2_ins:inv_x2_sig:z_2_ins:32:355 ps
+P:z_2_ins:z 2:z 2:32:355 ps

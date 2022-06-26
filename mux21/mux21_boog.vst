@@ -1,0 +1,38 @@
+entity mux21_boog is
+   port (
+      a   : in      bit;
+      b   : in      bit;
+      s   : in      bit;
+      x   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end mux21_boog;
+
+architecture structural of mux21_boog is
+Component mx2_x2
+   port (
+      cmd : in      bit;
+      i0  : in      bit;
+      i1  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+
+begin
+
+x_ins : mx2_x2
+   port map (
+      cmd => s,
+      i0  => a,
+      i1  => b,
+      q   => x,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+end structural;

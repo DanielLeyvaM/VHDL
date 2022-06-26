@@ -1,0 +1,24 @@
+-- VHDL data flow description generated from `sum3b_model_boom`
+--		date : Fri Oct  9 20:39:52 2020
+
+
+-- Entity Declaration
+
+ENTITY sum3b_model_boom IS
+  PORT (
+  cix : out BIT;	-- cix
+  vss : in BIT;	-- vss
+  vdd : in BIT;	-- vdd
+  ci : in BIT	-- ci
+  );
+END sum3b_model_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF sum3b_model_boom IS
+
+BEGIN
+
+cix <= ci;
+END;

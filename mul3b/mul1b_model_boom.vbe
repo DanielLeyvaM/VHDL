@@ -1,0 +1,25 @@
+-- VHDL data flow description generated from `mul1b_model_boom`
+--		date : Wed Nov  4 11:12:42 2020
+
+
+-- Entity Declaration
+
+ENTITY mul1b_model_boom IS
+  PORT (
+  x1 : out BIT;	-- x1
+  vss : in BIT;	-- vss
+  vdd : in BIT;	-- vdd
+  y : in BIT;	-- y
+  x : in BIT	-- x
+  );
+END mul1b_model_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF mul1b_model_boom IS
+
+BEGIN
+
+x1 <= (y AND x);
+END;

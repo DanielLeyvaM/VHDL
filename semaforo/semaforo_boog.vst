@@ -1,0 +1,141 @@
+entity semaforo_boog is
+   port (
+      clk : in      bit;
+      rst : in      bit;
+      roj : out     bit;
+      ama : out     bit;
+      ver : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end semaforo_boog;
+
+architecture structural of semaforo_boog is
+Component no2_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      nq  : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component sff1_x4
+   port (
+      ck  : in      bit;
+      i   : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component an12_x1
+   port (
+      i0  : in      bit;
+      i1  : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+Component buf_x2
+   port (
+      i   : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+signal maquina       : bit_vector( 1 downto 0);
+signal aux1          : bit;
+signal aux0          : bit;
+signal an12_x1_sig   : bit;
+signal an12_x1_2_sig : bit;
+
+begin
+
+aux1_ins : no2_x1
+   port map (
+      i0  => maquina(1),
+      i1  => maquina(0),
+      nq  => aux1,
+      vdd => vdd,
+      vss => vss
+   );
+
+aux0_ins : an12_x1
+   port map (
+      i0  => maquina(1),
+      i1  => maquina(0),
+      q   => aux0,
+      vdd => vdd,
+      vss => vss
+   );
+
+an12_x1_ins : an12_x1
+   port map (
+      i0  => rst,
+      i1  => aux0,
+      q   => an12_x1_sig,
+      vdd => vdd,
+      vss => vss
+   );
+
+maquina_1_ins : sff1_x4
+   port map (
+      ck  => clk,
+      i   => an12_x1_sig,
+      q   => maquina(1),
+      vdd => vdd,
+      vss => vss
+   );
+
+an12_x1_2_ins : an12_x1
+   port map (
+      i0  => rst,
+      i1  => aux1,
+      q   => an12_x1_2_sig,
+      vdd => vdd,
+      vss => vss
+   );
+
+maquina_0_ins : sff1_x4
+   port map (
+      ck  => clk,
+      i   => an12_x1_2_sig,
+      q   => maquina(0),
+      vdd => vdd,
+      vss => vss
+   );
+
+ver_ins : buf_x2
+   port map (
+      i   => aux0,
+      q   => ver,
+      vdd => vdd,
+      vss => vss
+   );
+
+ama_ins : an12_x1
+   port map (
+      i0  => maquina(0),
+      i1  => maquina(1),
+      q   => ama,
+      vdd => vdd,
+      vss => vss
+   );
+
+roj_ins : buf_x2
+   port map (
+      i   => aux1,
+      q   => roj,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+end structural;

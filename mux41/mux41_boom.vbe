@@ -1,0 +1,29 @@
+-- VHDL data flow description generated from `mux41_boom`
+--		date : Mon Sep 28 18:32:19 2020
+
+
+-- Entity Declaration
+
+ENTITY mux41_boom IS
+  PORT (
+  a : in BIT;	-- a
+  b : in BIT;	-- b
+  c : in BIT;	-- c
+  d : in BIT;	-- d
+  s : in bit_vector(1 DOWNTO 0) ;	-- s
+  x : out BIT;	-- x
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END mux41_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF mux41_boom IS
+
+BEGIN
+
+x <= (((NOT(s(1)) OR d) AND (s(1) OR b) AND s(0)) OR (
+(NOT(s(1)) OR c) AND (s(1) OR a) AND NOT(s(0))));
+END;

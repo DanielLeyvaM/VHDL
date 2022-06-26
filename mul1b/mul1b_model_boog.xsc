@@ -1,0 +1,9 @@
+N:x:-1:0 ps
+N:x1:-1:324 ps
+N:y:-1:0 ps
+B:x1_ins:32:324 ps
+C:x:-1:0 ps
+C:y:32:0 ps
+C:x1:32:324 ps
+P:y:y:x1_ins:32:324 ps
+P:x1_ins:x1:x1:32:324 ps

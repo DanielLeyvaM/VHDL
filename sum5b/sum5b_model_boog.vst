@@ -1,0 +1,32 @@
+entity sum5b_model_boog is
+   port (
+      cix : out     bit;
+      vss : in      bit;
+      vdd : in      bit;
+      ci  : in      bit
+ );
+end sum5b_model_boog;
+
+architecture structural of sum5b_model_boog is
+Component buf_x2
+   port (
+      i   : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+
+begin
+
+cix_ins : buf_x2
+   port map (
+      i   => ci,
+      q   => cix,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+end structural;

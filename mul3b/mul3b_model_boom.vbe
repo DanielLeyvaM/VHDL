@@ -1,0 +1,53 @@
+-- VHDL data flow description generated from `mul3b_model_boom`
+--		date : Wed Nov  4 11:12:42 2020
+
+
+-- Entity Declaration
+
+ENTITY mul3b_model_boom IS
+  PORT (
+  rtl_map_5 : out BIT;	-- rtl_map_5
+  rtl_map_4 : out BIT;	-- rtl_map_4
+  rtl_map_3 : out BIT;	-- rtl_map_3
+  rtl_map_2 : out BIT;	-- rtl_map_2
+  rtl_map_1 : out BIT;	-- rtl_map_1
+  rtl_map_0 : out BIT;	-- rtl_map_0
+  cx : in bit_vector(8 DOWNTO 0) ;	-- cx
+  sx : in bit_vector(8 DOWNTO 0) ;	-- sx
+  vss : in BIT;	-- vss
+  vdd : in BIT;	-- vdd
+  z : out bit_vector(5 DOWNTO 0) 	-- z
+  );
+END mul3b_model_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF mul3b_model_boom IS
+
+BEGIN
+
+z (0) <= sx(0);
+
+z (1) <= sx(3);
+
+z (2) <= sx(6);
+
+z (3) <= sx(7);
+
+z (4) <= sx(8);
+
+z (5) <= cx(8);
+
+rtl_map_0 <= '0';
+
+rtl_map_1 <= '0';
+
+rtl_map_2 <= '0';
+
+rtl_map_3 <= '0';
+
+rtl_map_4 <= '0';
+
+rtl_map_5 <= '0';
+END;

@@ -1,0 +1,13 @@
+--COUGAR----------------------------------------------------------------
+		---> Figure size   : (   -100,   -100 )
+		                     (  24100,  20100 )
+                             484,410,000
+                             0.48 $
+		---> Build transistors
+		<--- 188
+        
+--Como no hay critical path se utiliza el de los componentes 
+(multiplicador 1 bit/ sumador o compuerta and)
+y se elige el mayor critical path  
+------------------------------------------------------------------------
+

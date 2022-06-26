@@ -1,0 +1,33 @@
+-- VHDL data flow description generated from `sum2b_boom`
+--		date : Wed Oct 28 12:53:31 2020
+
+
+-- Entity Declaration
+
+ENTITY sum2b_boom IS
+  PORT (
+  a : in bit_vector(1 DOWNTO 0) ;	-- a
+  b : in bit_vector(1 DOWNTO 0) ;	-- b
+  ci : in BIT;	-- ci
+  so : out bit_vector(1 DOWNTO 0) ;	-- so
+  co : out BIT;	-- co
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END sum2b_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF sum2b_boom IS
+  SIGNAL aux3 : BIT;		-- aux3
+
+BEGIN
+  aux3 <= ((a(0) AND (ci OR b(0))) OR (ci AND b(0)));
+
+co <= ((a(1) OR b(1)) AND (aux3 OR (a(1) AND b(1))));
+
+so (0) <= (a(0) XOR b(0) XOR ci);
+
+so (1) <= (aux3 XOR b(1) XOR a(1));
+END;

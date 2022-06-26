@@ -1,0 +1,21 @@
+LEFT
+(
+    (IOPIN x(0).0); 
+    (IOPIN x(1).0); 
+    (IOPIN x(2).0); 
+)
+TOP
+(
+    (IOPIN y(0).0); 
+    (IOPIN y(1).0); 
+    (IOPIN y(2).0); 
+)
+RIGHT
+(
+    (IOPIN z(0).0);
+    (IOPIN z(1).0);
+    (IOPIN z(2).0);
+    (IOPIN z(3).0);
+    (IOPIN z(4).0);
+    (IOPIN z(5).0);
+)

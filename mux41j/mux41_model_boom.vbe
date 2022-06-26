@@ -1,0 +1,24 @@
+-- VHDL data flow description generated from `mux41_model_boom`
+--		date : Mon Sep 28 19:32:13 2020
+
+
+-- Entity Declaration
+
+ENTITY mux41_model_boom IS
+  PORT (
+  x2 : in BIT;	-- x2
+  vss : in BIT;	-- vss
+  vdd : in BIT;	-- vdd
+  x : out BIT	-- x
+  );
+END mux41_model_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF mux41_model_boom IS
+
+BEGIN
+
+x <= x2;
+END;

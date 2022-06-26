@@ -1,0 +1,125 @@
+* Spice description of sum2b_cougar
+* Spice driver version -1208869212
+* Date ( dd/mm/yyyy hh:mm:ss ): 14/10/2020 at 11:32:08
+
+* INTERF a[0] a[1] b[0] b[1] ci co so[0] so[1] vdd vss 
+
+
+.subckt sum2b_cougar a[0] a[1] b[0] b[1] ci co so[0] so[1] vdd vss 
+Mtr_00082 sig5 b[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00081 vdd a[0] sig4 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00080 x0.xr2_x1_sig sig5 sig1 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00079 sig1 a[0] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00078 sig1 sig4 x0.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00077 vdd b[0] sig1 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00076 co sig10 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00075 sig11 a[1] sig9 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00074 sig11 b[1] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00073 vdd a[1] sig11 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00072 sig9 b[1] sig10 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00071 sig10 acarreo sig11 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00070 vdd ci sig19 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00069 vdd sig19 cix vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00068 cix sig19 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00067 vdd sig19 cix vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00066 cix sig19 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00065 sig27 cix vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00064 vdd x0.xr2_x1_sig sig21 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00063 so[0] sig27 sig34 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00062 sig34 x0.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00061 sig34 sig21 so[0] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00060 vdd cix sig34 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00059 sig29 b[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00058 vdd a[1] sig28 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00057 x1.xr2_x1_sig sig29 sig35 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00056 sig35 a[1] vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00055 sig35 sig28 x1.xr2_x1_sig vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00054 vdd b[1] sig35 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00053 acarreo sig38 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00052 sig36 a[0] sig37 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00051 sig36 b[0] vdd vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00050 vdd a[0] sig36 vdd tp L=1U W=14.5U AS=29P AD=29P PS=33U PD=33U 
+Mtr_00049 sig37 b[0] sig38 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00048 sig38 cix sig36 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00047 sig42 acarreo vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00046 vdd x1.xr2_x1_sig sig39 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00045 so[1] sig42 sig41 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00044 sig41 x1.xr2_x1_sig vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00043 sig41 sig39 so[1] vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00042 vdd acarreo sig41 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00041 sig4 a[0] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00040 vss b[0] sig5 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00039 sig15 sig5 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00038 x0.xr2_x1_sig sig4 sig15 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00037 sig17 b[0] x0.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00036 vss a[0] sig17 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00035 vss sig10 co vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00034 vss b[1] sig24 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00033 sig24 a[1] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00032 sig10 b[1] sig25 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00031 sig25 a[1] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00030 sig24 acarreo sig10 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00029 sig19 ci vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00028 cix sig19 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00027 vss sig19 cix vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00026 vss sig19 cix vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00025 cix sig19 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00024 sig21 x0.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00023 vss cix sig27 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00022 sig26 sig27 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00021 so[0] sig21 sig26 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00020 sig22 cix so[0] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00019 vss x0.xr2_x1_sig sig22 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00018 sig28 a[1] vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00017 vss b[1] sig29 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00016 sig31 sig29 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00015 x1.xr2_x1_sig sig28 sig31 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00014 sig32 b[1] x1.xr2_x1_sig vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00013 vss a[1] sig32 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00012 vss sig38 acarreo vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00011 vss b[0] sig44 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00010 sig44 a[0] vss vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00009 sig38 b[0] sig45 vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00008 sig45 a[0] vss vss tn L=1U W=9U AS=18P AD=18P PS=22U PD=22U 
+Mtr_00007 sig44 cix sig38 vss tn L=1U W=6U AS=12P AD=12P PS=16U PD=16U 
+Mtr_00006 sig39 x1.xr2_x1_sig vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00005 vss acarreo sig42 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00004 sig47 sig42 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00003 so[1] sig39 sig47 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00002 sig46 acarreo so[1] vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00001 vss x1.xr2_x1_sig sig46 vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+C44 sig44 vss 4.11e-15
+C42 sig42 vss 2.596e-14
+C41 sig41 vss 9.7e-15
+C40 so[1] vss 3.529e-14
+C39 sig39 vss 2.16e-14
+C38 sig38 vss 2.299e-14
+C36 sig36 vss 8.58e-15
+C35 sig35 vss 9.7e-15
+C34 sig34 vss 9.7e-15
+C30 x1.xr2_x1_sig vss 6.351e-14
+C29 sig29 vss 2.596e-14
+C28 sig28 vss 2.16e-14
+C27 sig27 vss 2.596e-14
+C24 sig24 vss 4.11e-15
+C23 so[0] vss 5.185e-14
+C21 sig21 vss 2.16e-14
+C20 ci vss 4.629e-14
+C19 sig19 vss 4.103e-14
+C18 cix vss 1.0725e-13
+C16 vss vss 4.56041e-13
+C14 a[1] vss 8.771e-14
+C13 b[1] vss 9.432e-14
+C12 acarreo vss 1.0885e-13
+C11 sig11 vss 8.58e-15
+C10 sig10 vss 2.299e-14
+C8 co vss 5.12e-14
+C7 a[0] vss 1.1003e-13
+C6 b[0] vss 1.2192e-13
+C5 sig5 vss 2.596e-14
+C4 sig4 vss 2.16e-14
+C3 x0.xr2_x1_sig vss 6.351e-14
+C2 vdd vss 4.63881e-13
+C1 sig1 vss 9.7e-15
+.ends sum2b_cougar
+

@@ -1,0 +1,89 @@
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2020,        ASIM/LIP6/UPMC
+                 Author(s):                     François Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /usr/share/alliance/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'mul3b_boog.vst'...
+Reading lib '/usr/share/alliance/cells/sxlib'...
+Capacitances on file 'mul3b_boog.vst'...
+Delays on file 'mul3b_boog.vst'...2255 ps
+Area on file 'mul3b_boog.vst'...61250 lamda² (with over-cell routing)
+Details...
+	inv_x2: 7 (8%)
+	a2_x2: 6 (12%)
+	o2_x2: 5 (10%)
+	xr2_x1: 5 (18%)
+	oa22_x2: 4 (9%)
+	no3_x1: 1 (2%)
+	an12_x1: 1 (2%)
+	na4_x1: 1 (2%)
+	o3_x2: 1 (2%)
+	o4_x2: 1 (2%)
+	nao2o22_x1: 1 (2%)
+	a4_x2: 1 (2%)
+	no4_x1: 1 (2%)
+	no2_x1: 1 (1%)
+	a3_x2: 1 (2%)
+	nao22_x1: 1 (2%)
+	mx3_x2: 1 (5%)
+	mx2_x2: 1 (3%)
+	buf_x2: 1 (1%)
+	na2_x1: 1 (1%)
+	na3_x1: 1 (2%)
+	Total: 43
+Worst RC on file 'mul3b_boog.vst'...92 ps
+Inserting buffers on critical path for file 'mul3b.vst'...3 buffers inserted -> 2141 ps
+Improving RC on critical path for file 'mul3b.vst'...2139 ps
+Improving all RC for file 'mul3b.vst'...
+Worst RC on file 'mul3b.vst'...90 ps
+Area on file 'mul3b.vst'...64500 lamda² (with over-cell routing)
+Details...
+	inv_x2: 6 (6%)
+	a2_x2: 6 (11%)
+	o2_x2: 5 (9%)
+	xr2_x1: 5 (17%)
+	buf_x2: 4 (6%)
+	oa22_x2: 4 (9%)
+	no3_x1: 1 (1%)
+	an12_x1: 1 (1%)
+	na4_x1: 1 (2%)
+	o3_x2: 1 (2%)
+	o4_x2: 1 (2%)
+	nao2o22_x1: 1 (2%)
+	a4_x2: 1 (2%)
+	no4_x1: 1 (2%)
+	no2_x1: 1 (1%)
+	a3_x2: 1 (2%)
+	nao22_x1: 1 (2%)
+	mx3_x2: 1 (5%)
+	mx2_x2: 1 (3%)
+	inv_x4: 1 (1%)
+	na2_x1: 1 (1%)
+	na3_x1: 1 (1%)
+	Total: 46
+Critical path (no warranty)...2139 ps from 'x 1' to 'z 3'
+Saving file 'mul3b.vst'...
+Saving critical path in xsch color file 'mul3b.xsc'...
+End of loon...
+

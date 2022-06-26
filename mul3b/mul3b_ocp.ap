@@ -1,0 +1,99 @@
+V ALLIANCE : 6
+H mul3b_ocp,P, 4/11/2020,100
+A 0,0,34000,30000
+C 0,5000,100,x 0,0,WEST,ALU3
+C 0,15000,100,x 1,0,WEST,ALU3
+C 0,25000,100,x 2,0,WEST,ALU3
+C 5500,30000,200,y 0,0,NORTH,ALU2
+C 17000,30000,200,y 1,0,NORTH,ALU2
+C 28000,30000,200,y 2,0,NORTH,ALU2
+C 34000,2500,100,z 0,0,EAST,ALU3
+C 34000,7500,100,z 1,0,EAST,ALU3
+C 34000,12500,100,z 2,0,EAST,ALU3
+C 34000,17500,100,z 3,0,EAST,ALU3
+C 34000,22500,100,z 4,0,EAST,ALU3
+C 34000,27500,100,z 5,0,EAST,ALU3
+I 33000,25000,tie_x0,tiex0_35,NOSYM
+I 33000,5000,tie_x0,tiex0_34,NOSYM
+I 33000,0,tie_x0,tiex0_33,SYM_Y
+I 30000,25000,tie_x0,tiex0_32,NOSYM
+I 30000,5000,tie_x0,tiex0_31,NOSYM
+I 30000,0,tie_x0,tiex0_30,SYM_Y
+I 24500,5000,tie_x0,tiex0_29,NOSYM
+I 24500,0,tie_x0,tiex0_28,SYM_Y
+I 24000,25000,tie_x0,tiex0_27,NOSYM
+I 23500,5000,tie_x0,tiex0_26,NOSYM
+I 22000,0,tie_x0,tiex0_25,SYM_Y
+I 18500,25000,tie_x0,tiex0_24,NOSYM
+I 17500,5000,tie_x0,tiex0_23,NOSYM
+I 17000,20000,tie_x0,tiex0_22,SYM_Y
+I 16500,5000,tie_x0,tiex0_21,NOSYM
+I 16500,0,tie_x0,tiex0_20,SYM_Y
+I 15000,25000,tie_x0,tiex0_19,NOSYM
+I 14000,0,tie_x0,tiex0_18,SYM_Y
+I 13500,20000,tie_x0,tiex0_17,SYM_Y
+I 13500,5000,rowend_x0,rowendx0_16,NOSYM
+I 12500,5000,tie_x0,tiex0_15,NOSYM
+I 11500,25000,tie_x0,tiex0_14,NOSYM
+I 10500,15000,tie_x0,tiex0_13,NOSYM
+I 8000,20000,tie_x0,tiex0_12,SYM_Y
+I 8000,0,tie_x0,tiex0_11,SYM_Y
+I 7000,5000,tie_x0,tiex0_10,NOSYM
+I 7000,0,tie_x0,tiex0_9,SYM_Y
+I 6000,5000,tie_x0,tiex0_8,NOSYM
+I 5500,25000,tie_x0,tiex0_7,NOSYM
+I 5000,15000,tie_x0,tiex0_6,NOSYM
+I 4500,25000,tie_x0,tiex0_5,NOSYM
+I 2500,20000,tie_x0,tiex0_4,SYM_Y
+I 2500,5000,tie_x0,tiex0_3,NOSYM
+I 1500,5000,tie_x0,tiex0_2,NOSYM
+I 1500,0,tie_x0,tiex0_1,SYM_Y
+I 25000,25000,oa2ao222_x2,u8.y0.co_ins,NOSYM
+I 31000,25000,buf_x2,mul3b_inst.z_5_ins,NOSYM
+I 19500,25000,xr2_x1,u8.y0.xr2_x1_ins,NOSYM
+I 16000,25000,a2_x2,u8.mul1b_inst.x1_ins,NOSYM
+I 6500,25000,oa2ao222_x2,u5.y0.co_ins,NOSYM
+I 12500,25000,a2_x2,u5.mul1b_inst.x1_ins,NOSYM
+I 0,25000,xr2_x1,u5.y0.xr2_x1_ins,NOSYM
+I 27500,20000,xr2_x1,u8.y0.so_ins,SYM_Y
+I 23000,20000,xr2_x1,u7.y0.so_ins,SYM_Y
+I 32000,20000,buf_x2,mul3b_inst.z_4_ins,SYM_Y
+I 18000,20000,oa2ao222_x2,u7.y0.co_ins,SYM_Y
+I 9000,20000,xr2_x1,u7.y0.xr2_x1_ins,SYM_Y
+I 0,20000,a2_x2,u2.mul1b_inst.x1_ins,SYM_Y
+I 14500,20000,a2_x2,u7.mul1b_inst.x1_ins,SYM_Y
+I 3500,20000,xr2_x1,u5.y0.so_ins,SYM_Y
+I 30500,15000,zero_x0,mul3b_inst.rtl_map_0_ins,NOSYM
+I 25500,15000,oa2ao222_x2,u6.y0.co_ins,NOSYM
+I 32000,15000,buf_x2,mul3b_inst.z_3_ins,NOSYM
+I 11500,15000,xr2_x1,u2.y0.so_ins,NOSYM
+I 21000,15000,xr2_x1,u4.y0.xr2_x1_ins,NOSYM
+I 16000,15000,oa2ao222_x2,u4.y0.co_ins,NOSYM
+I 0,15000,oa2ao222_x2,u2.y0.co_ins,NOSYM
+I 6000,15000,xr2_x1,u2.y0.xr2_x1_ins,NOSYM
+I 32000,10000,buf_x2,mul3b_inst.z_2_ins,SYM_Y
+I 27500,10000,xr2_x1,u6.y0.so_ins,SYM_Y
+I 23000,10000,xr2_x1,u6.y0.xr2_x1_ins,SYM_Y
+I 4000,10000,xr2_x1,u1.y0.xr2_x1_ins,SYM_Y
+I 8500,10000,oa2ao222_x2,u1.y0.co_ins,SYM_Y
+I 18500,10000,xr2_x1,u4.y0.so_ins,SYM_Y
+I 0,10000,zero_x0,mul3b_inst.rtl_map_3_ins,SYM_Y
+I 16000,10000,a2_x2,u6.mul1b_inst.x1_ins,SYM_Y
+I 13500,10000,a2_x2,u4.mul1b_inst.x1_ins,SYM_Y
+I 1500,10000,a2_x2,u1.mul1b_inst.x1_ins,SYM_Y
+I 25500,5000,xr2_x1,u3.y0.xr2_x1_ins,NOSYM
+I 31000,5000,buf_x2,mul3b_inst.z_1_ins,NOSYM
+I 8000,5000,xr2_x1,u1.y0.so_ins,NOSYM
+I 18500,5000,oa2ao222_x2,u3.y0.co_ins,NOSYM
+I 3500,5000,a2_x2,u0.mul1b_inst.x1_ins,NOSYM
+I 14000,5000,a2_x2,u3.mul1b_inst.x1_ins,NOSYM
+I 0,5000,zero_x0,mul3b_inst.rtl_map_2_ins,NOSYM
+I 25500,0,xr2_x1,u3.y0.so_ins,SYM_Y
+I 0,0,zero_x0,mul3b_inst.rtl_map_5_ins,SYM_Y
+I 23000,0,zero_x0,mul3b_inst.rtl_map_1_ins,SYM_Y
+I 15000,0,zero_x0,mul3b_inst.rtl_map_4_ins,SYM_Y
+I 9000,0,oa2ao222_x2,u0.y0.co_ins,SYM_Y
+I 31000,0,buf_x2,mul3b_inst.z_0_ins,SYM_Y
+I 17500,0,xr2_x1,u0.y0.so_ins,SYM_Y
+I 2500,0,xr2_x1,u0.y0.xr2_x1_ins,SYM_Y
+EOF

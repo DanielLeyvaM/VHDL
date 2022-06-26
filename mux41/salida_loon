@@ -1,0 +1,58 @@
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2020,        ASIM/LIP6/UPMC
+                 Author(s):                     François Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /usr/share/alliance/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'mux41_boog.vst'...
+Reading lib '/usr/share/alliance/cells/sxlib'...
+Capacitances on file 'mux41_boog.vst'...
+Delays on file 'mux41_boog.vst'...1156 ps
+Area on file 'mux41_boog.vst'...9500 lamda² (with over-cell routing)
+Details...
+	on12_x1: 2 (26%)
+	an12_x1: 2 (26%)
+	na2_x1: 1 (10%)
+	na3_x1: 1 (13%)
+	o3_x2: 1 (15%)
+	inv_x2: 1 (7%)
+	Total: 8
+Worst RC on file 'mux41_boog.vst'...43 ps
+Inserting buffers on critical path for file 'mux41.vst'...None inserted
+Improving RC on critical path for file 'mux41.vst'...1118 ps
+Improving all RC for file 'mux41.vst'...
+Worst RC on file 'mux41.vst'...43 ps
+Area on file 'mux41.vst'...10500 lamda² (with over-cell routing)
+Details...
+	on12_x1: 2 (23%)
+	an12_x1: 2 (23%)
+	na2_x1: 1 (9%)
+	na3_x1: 1 (11%)
+	o3_x2: 1 (14%)
+	inv_x8: 1 (16%)
+	Total: 8
+Critical path (no warranty)...1118 ps from 's 1' to 'x'
+Saving file 'mux41.vst'...
+Saving critical path in xsch color file 'mux41.xsc'...
+End of loon...
+

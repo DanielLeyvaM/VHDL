@@ -1,0 +1,75 @@
+* Spice description of mux41_cougar
+* Spice driver version -1209131356
+* Date ( dd/mm/yyyy hh:mm:ss ): 28/09/2020 at 19:32:21
+
+* INTERF a b c d s[0] s[1] vdd vss x 
+
+
+.subckt mux41_cougar a b c d s[0] s[1] vdd vss x 
+Mtr_00046 vdd x2 sig3 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00045 vdd sig3 x vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00044 x sig3 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00043 vdd sig3 x vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00042 x sig3 vdd vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00041 vdd sig10 x1 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00040 sig11 d vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00039 sig6 s[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00038 sig9 s[0] sig10 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00037 sig10 sig6 sig11 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00036 vdd c sig9 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00035 vdd sig25 x0 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00034 sig32 b vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00033 sig20 s[0] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00032 sig31 s[0] sig25 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00031 sig25 sig20 sig32 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00030 vdd a sig31 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00029 vdd sig16 x2 vdd tp L=1U W=20U AS=40P AD=40P PS=44U PD=44U 
+Mtr_00028 sig28 x1 vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00027 sig14 s[1] vdd vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00026 sig30 s[1] sig16 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00025 sig16 sig14 sig28 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00024 vdd x0 sig30 vdd tp L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00023 sig3 x2 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00022 x sig3 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00021 vss sig3 x vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00020 vss sig3 x vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00019 x sig3 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00018 vss d sig23 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00017 sig23 s[0] sig10 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00016 vss s[0] sig6 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00015 sig10 sig6 sig22 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00014 sig22 c vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00013 x1 sig10 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00012 vss b sig24 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00011 sig24 s[0] sig25 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00010 vss s[0] sig20 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00009 sig25 sig20 sig26 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00008 sig26 a vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00007 x0 sig25 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+Mtr_00006 vss x1 sig15 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00005 sig15 s[1] sig16 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00004 vss s[1] sig14 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00003 sig16 sig14 sig17 vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00002 sig17 x0 vss vss tn L=1U W=5U AS=10P AD=10P PS=14U PD=14U 
+Mtr_00001 x2 sig16 vss vss tn L=1U W=10U AS=20P AD=20P PS=24U PD=24U 
+C27 b vss 3.381e-14
+C25 sig25 vss 1.932e-14
+C21 a vss 3.912e-14
+C20 sig20 vss 2.356e-14
+C19 x0 vss 6.292e-14
+C18 s[1] vss 6.011e-14
+C16 sig16 vss 1.932e-14
+C14 sig14 vss 2.356e-14
+C13 vss vss 2.4788e-13
+C12 d vss 3.381e-14
+C10 sig10 vss 1.932e-14
+C8 x1 vss 7.273e-14
+C7 s[0] vss 9.795e-14
+C6 sig6 vss 2.356e-14
+C5 c vss 3.912e-14
+C4 x2 vss 6.145e-14
+C3 sig3 vss 4.103e-14
+C2 x vss 4.523e-14
+C1 vdd vss 2.7616e-13
+.ends mux41_cougar
+

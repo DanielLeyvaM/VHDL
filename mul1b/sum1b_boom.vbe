@@ -1,0 +1,29 @@
+-- VHDL data flow description generated from `sum1b_boom`
+--		date : Mon Oct 26 18:46:29 2020
+
+
+-- Entity Declaration
+
+ENTITY sum1b_boom IS
+  PORT (
+  a : in BIT;	-- a
+  b : in BIT;	-- b
+  ci : in BIT;	-- ci
+  so : out BIT;	-- so
+  co : out BIT;	-- co
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END sum1b_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF sum1b_boom IS
+
+BEGIN
+
+co <= ((b AND (a OR ci)) OR (a AND ci));
+
+so <= (b XOR ci XOR a);
+END;

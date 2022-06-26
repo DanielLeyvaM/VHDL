@@ -1,0 +1,536 @@
+-- VHDL data flow description generated from `act5_boom`
+--		date : Mon Nov 23 13:02:48 2020
+
+
+-- Entity Declaration
+
+ENTITY act5_boom IS
+  PORT (
+  clk : in BIT;	-- clk
+  rst : in BIT;	-- rst
+  ctrl : in BIT;	-- ctrl
+  ctrl1 : in BIT;	-- ctrl1
+  um : out bit_vector(3 DOWNTO 0) ;	-- um
+  dm : out bit_vector(3 DOWNTO 0) ;	-- dm
+  uh : out bit_vector(3 DOWNTO 0) ;	-- uh
+  dh : out bit_vector(3 DOWNTO 0) ;	-- dh
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END act5_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF act5_boom IS
+  SIGNAL rtlalc_12 : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- rtlalc_12
+  SIGNAL rtlalc_11 : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- rtlalc_11
+  SIGNAL rtlalc_10 : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- rtlalc_10
+  SIGNAL rtlalc_9 : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- rtlalc_9
+  SIGNAL mum : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- mum
+  SIGNAL mdm : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- mdm
+  SIGNAL muh : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- muh
+  SIGNAL mdh : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- mdh
+  SIGNAL cum : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- cum
+  SIGNAL cdm : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- cdm
+  SIGNAL cuh : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- cuh
+  SIGNAL cdh : REG_VECTOR(3 DOWNTO 0) REGISTER;	-- cdh
+  SIGNAL stop : REG_BIT REGISTER;	-- stop
+  SIGNAL maquina : REG_BIT REGISTER;	-- maquina
+  SIGNAL maquina1 : REG_BIT REGISTER;	-- maquina1
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux10 : BIT;		-- aux10
+  SIGNAL aux11 : BIT;		-- aux11
+  SIGNAL aux14 : BIT;		-- aux14
+  SIGNAL aux15 : BIT;		-- aux15
+  SIGNAL aux16 : BIT;		-- aux16
+  SIGNAL aux17 : BIT;		-- aux17
+  SIGNAL aux19 : BIT;		-- aux19
+  SIGNAL aux21 : BIT;		-- aux21
+  SIGNAL aux23 : BIT;		-- aux23
+  SIGNAL aux24 : BIT;		-- aux24
+  SIGNAL aux25 : BIT;		-- aux25
+  SIGNAL aux38 : BIT;		-- aux38
+  SIGNAL aux39 : BIT;		-- aux39
+  SIGNAL aux42 : BIT;		-- aux42
+  SIGNAL aux43 : BIT;		-- aux43
+  SIGNAL aux44 : BIT;		-- aux44
+  SIGNAL aux47 : BIT;		-- aux47
+  SIGNAL aux48 : BIT;		-- aux48
+  SIGNAL aux49 : BIT;		-- aux49
+  SIGNAL aux54 : BIT;		-- aux54
+  SIGNAL aux56 : BIT;		-- aux56
+  SIGNAL aux57 : BIT;		-- aux57
+  SIGNAL aux58 : BIT;		-- aux58
+  SIGNAL aux59 : BIT;		-- aux59
+  SIGNAL aux60 : BIT;		-- aux60
+  SIGNAL aux61 : BIT;		-- aux61
+  SIGNAL aux63 : BIT;		-- aux63
+  SIGNAL aux64 : BIT;		-- aux64
+  SIGNAL aux66 : BIT;		-- aux66
+  SIGNAL aux70 : BIT;		-- aux70
+  SIGNAL aux71 : BIT;		-- aux71
+  SIGNAL aux72 : BIT;		-- aux72
+  SIGNAL aux73 : BIT;		-- aux73
+  SIGNAL aux78 : BIT;		-- aux78
+  SIGNAL aux81 : BIT;		-- aux81
+  SIGNAL aux82 : BIT;		-- aux82
+  SIGNAL aux85 : BIT;		-- aux85
+  SIGNAL aux88 : BIT;		-- aux88
+  SIGNAL aux92 : BIT;		-- aux92
+  SIGNAL aux96 : BIT;		-- aux96
+  SIGNAL aux104 : BIT;		-- aux104
+  SIGNAL aux105 : BIT;		-- aux105
+  SIGNAL aux107 : BIT;		-- aux107
+  SIGNAL aux111 : BIT;		-- aux111
+  SIGNAL aux113 : BIT;		-- aux113
+  SIGNAL aux116 : BIT;		-- aux116
+  SIGNAL aux117 : BIT;		-- aux117
+  SIGNAL aux118 : BIT;		-- aux118
+  SIGNAL aux119 : BIT;		-- aux119
+  SIGNAL aux127 : BIT;		-- aux127
+  SIGNAL aux129 : BIT;		-- aux129
+  SIGNAL aux130 : BIT;		-- aux130
+  SIGNAL aux131 : BIT;		-- aux131
+  SIGNAL aux132 : BIT;		-- aux132
+  SIGNAL aux133 : BIT;		-- aux133
+  SIGNAL aux134 : BIT;		-- aux134
+  SIGNAL aux135 : BIT;		-- aux135
+  SIGNAL aux137 : BIT;		-- aux137
+  SIGNAL aux138 : BIT;		-- aux138
+  SIGNAL aux139 : BIT;		-- aux139
+  SIGNAL aux140 : BIT;		-- aux140
+  SIGNAL aux141 : BIT;		-- aux141
+  SIGNAL aux142 : BIT;		-- aux142
+  SIGNAL aux143 : BIT;		-- aux143
+  SIGNAL aux144 : BIT;		-- aux144
+  SIGNAL aux145 : BIT;		-- aux145
+  SIGNAL aux146 : BIT;		-- aux146
+  SIGNAL aux147 : BIT;		-- aux147
+  SIGNAL aux148 : BIT;		-- aux148
+  SIGNAL aux149 : BIT;		-- aux149
+  SIGNAL aux150 : BIT;		-- aux150
+
+BEGIN
+  aux150 <= (aux23 AND (NOT(rst) AND aux1));
+  aux149 <= ((aux21 OR NOT(cuh(3))) OR NOT(cdm(2)) OR cdm(1) 
+OR cum(2) OR NOT(cuh(0)));
+  aux148 <= (mdm(3) AND NOT(mdm(1)));
+  aux147 <= NOT(NOT(stop) AND NOT(cum(2)));
+  aux146 <= (NOT(cdh(1)) AND NOT(cdm(3)));
+  aux145 <= (stop OR (aux11 AND NOT(cdh(3))));
+  aux144 <= (rtlalc_12(2) OR NOT(rst));
+  aux143 <= (rtlalc_12(1) OR NOT(rst));
+  aux142 <= (rtlalc_12(0) OR NOT(rst));
+  aux141 <= (rtlalc_11(3) OR NOT(rst));
+  aux140 <= (NOT(rst) OR rtlalc_10(0));
+  aux139 <= (rtlalc_9(1) OR NOT(rst));
+  aux138 <= (rst OR NOT(maquina1));
+  aux137 <= (NOT(rst) AND (mum(1) XOR mum(2)));
+  aux135 <= (NOT(rst) AND mum(1));
+  aux134 <= NOT(NOT(rst) AND NOT(mum(0)));
+  aux133 <= (NOT(rst) AND mdm(2));
+  aux132 <= (aux113 OR NOT(mum(3)) OR NOT(mum(0)));
+  aux131 <= NOT(aux130 OR NOT(mum(0)));
+  aux130 <= (mum(2) OR NOT(mum(3)));
+  aux129 <= NOT((NOT(aux117) AND muh(0)) AND NOT(mdm(1)));
+  aux127 <= ((((muh(1) AND (((mdh(3) OR mdh(2)) OR mdh(0)) OR
+ NOT(mdh(1)))) OR (aux119 OR muh(2))) OR NOT(
+muh(0))) AND aux111);
+  aux119 <= NOT(muh(1) XOR muh(3));
+  aux118 <= (muh(1) AND NOT(rst));
+  aux117 <= (aux116 OR mdm(3));
+  aux116 <= (((aux113 OR NOT(mdm(2))) OR NOT(mum(3))) OR NOT(
+mum(0)));
+  aux113 <= ((mum(1) OR NOT(mdm(0))) OR mum(2));
+  aux111 <= ((((aux107 AND mdm(2)) AND mum(3)) AND mum(0)) 
+AND NOT(mdm(3)));
+  aux107 <= ((aux105 AND mdm(0)) AND NOT(mum(2)));
+  aux105 <= (NOT(rst) AND NOT(mum(1)));
+  aux104 <= NOT((((((((mdm(2) AND mum(3)) AND mum(0)) AND 
+mdh(2)) AND NOT(mdm(3))) AND mdh(0)) AND mdh(1)) AND 
+muh(0)) AND NOT(mdm(1)));
+  aux96 <= NOT((((NOT(mdm(3)) AND mdh(0)) AND mdh(1)) AND 
+muh(0)) AND NOT(mdm(1)));
+  aux92 <= (((aux73 OR (aux88 OR mdm(3))) AND NOT(rst)) AND 
+mdh(0));
+  aux88 <= (((aux85 OR NOT(mdm(2))) OR NOT(mum(3))) OR NOT(
+mum(0)));
+  aux85 <= (((muh(2) OR mum(1)) OR NOT(mdm(0))) OR mum(2));
+  aux82 <= (aux81 AND NOT(mdm(3)));
+  aux81 <= (((aux78 AND mdm(2)) AND mum(3)) AND mum(0));
+  aux78 <= (((((NOT(aux73) AND NOT(rst)) AND NOT(muh(2))) 
+AND NOT(mum(1))) AND mdm(0)) AND NOT(mum(2)));
+  aux73 <= NOT(NOT(muh(1)) AND muh(3));
+  aux72 <= NOT(muh(0) AND NOT(mdm(1)));
+  aux71 <= (aux0 OR NOT(cum(1)));
+  aux70 <= NOT((((NOT(cdm(2)) OR NOT(cdm(1))) OR cum(2)) OR 
+NOT(cum(3))) OR NOT(cdm(0)));
+  aux66 <= ((NOT(rst) AND cdm(3)) AND NOT(stop));
+  aux64 <= (NOT(rst) AND aux59);
+  aux63 <= (NOT(rst) AND cdm(2));
+  aux61 <= (aux17 AND NOT(stop));
+  aux60 <= NOT(aux58 OR NOT(cdm(0)));
+  aux59 <= (aux1 OR stop);
+  aux58 <= NOT(NOT(cum(2)) AND cum(3));
+  aux57 <= (NOT(rst) AND cuh(3));
+  aux56 <= NOT((NOT(cuh(1)) OR NOT(cum(3))) OR NOT(cdm(0)));
+  aux54 <= ((aux21 OR (((NOT(cdm(2)) OR cdm(1)) OR cum(2)) 
+OR NOT(cuh(0)))) AND aux43);
+  aux49 <= (aux47 AND cuh(0));
+  aux48 <= (NOT(rst) AND NOT(stop));
+  aux47 <= (((aux19 AND cdm(2)) AND NOT(cdm(1))) AND NOT(
+cum(2)));
+  aux44 <= NOT(NOT(cum(3)) OR NOT(cdm(0)));
+  aux43 <= (NOT(rst) AND aux23);
+  aux42 <= (((aux1 OR NOT(cdh(1))) OR cdm(3)) OR stop);
+  aux39 <= (cum(0) AND NOT(cum(1)));
+  aux38 <= (((((((((((((aux25 AND NOT(cdm(3))) AND NOT(stop)
+) AND cuh(3)) AND cdm(2)) AND NOT(cdm(1))) AND NOT
+(cum(2))) AND cuh(0)) AND NOT(cuh(2))) AND cdh(0))
+ AND NOT(cuh(1))) AND cum(3)) AND cdm(0)) AND 
+aux24);
+  aux25 <= (NOT(rst) AND NOT(cdh(1)));
+  aux24 <= (cdh(2) AND NOT(cdh(3)));
+  aux23 <= NOT(maquina AND stop);
+  aux21 <= ((aux1 OR cdm(3)) OR stop);
+  aux19 <= ((aux17 AND NOT(cdm(3))) AND NOT(stop));
+  aux17 <= (aux16 AND NOT(cum(1)));
+  aux16 <= (aux15 AND cum(0));
+  aux15 <= (NOT(rst) AND maquina);
+  aux14 <= NOT((cuh(1) OR NOT(cum(3))) OR NOT(cdm(0)));
+  aux11 <= (aux10 AND cdh(2));
+  aux10 <= (((((((((cuh(3) AND cdm(2)) AND NOT(cdm(1))) AND 
+NOT(cum(2))) AND cuh(0)) AND NOT(cuh(2))) AND cdh(0)
+) AND NOT(cuh(1))) AND cum(3)) AND cdm(0));
+  aux1 <= NOT(NOT(aux0) AND NOT(cum(1)));
+  aux0 <= NOT(maquina AND cum(0));
+  label0 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    maquina1 <= GUARDED (NOT(rst) AND (ctrl XOR maquina1));
+  END BLOCK label0;
+  label1 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    maquina <= GUARDED (NOT(rst) AND (maquina XOR ctrl1));
+  END BLOCK label1;
+  label2 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    stop <= GUARDED (aux145 AND ((NOT(aux1) AND aux146) OR stop) AND 
+NOT(rst));
+  END BLOCK label2;
+  label3 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdh (0) <= GUARDED (aux38 OR ((NOT(aux23) OR cdh(0)) AND NOT(rst) 
+AND (aux149 OR cuh(2))) OR (aux19 AND cuh(3) AND 
+cdm(2) AND NOT(cdm(1)) AND NOT(cum(2)) AND cuh(0) AND 
+NOT(cuh(2)) AND NOT(cdh(0)) AND aux14) OR (NOT(rst) 
+AND cdh(0) AND NOT(aux14)));
+  END BLOCK label3;
+  label4 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdh (1) <= GUARDED ((aux17 AND NOT(cdh(1)) AND NOT(cdm(3)) AND NOT(
+stop) AND cuh(3) AND cdm(2) AND NOT(cdm(1)) AND NOT(
+cum(2)) AND cuh(0) AND NOT(cuh(2)) AND cdh(0) AND NOT(
+cuh(1)) AND cum(3) AND cdm(0) AND NOT(aux24)) OR ((
+aux21 OR NOT(aux10)) AND aux23 AND NOT(rst) AND cdh(1)
+));
+  END BLOCK label4;
+  label5 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdh (2) <= GUARDED ((NOT(rst) AND (aux42 OR NOT(cuh(3)) OR NOT(
+cdm(2)) OR cdm(1) OR cum(2) OR NOT(cuh(0)) OR cuh(2) OR
+ NOT(cdh(0)) OR cuh(1) OR NOT(cum(3)) OR NOT(
+cdm(0))) AND cdh(2)) OR ((stop OR aux10) AND ((aux39 
+AND cdh(1) AND NOT(cdm(3))) OR stop) AND aux15 AND 
+NOT(cdh(2))));
+  END BLOCK label5;
+  label6 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdh (3) <= GUARDED (((aux42 OR NOT(aux11)) AND aux43 AND cdh(3)) OR 
+(aux17 AND cdh(1) AND NOT(cdm(3)) AND NOT(stop) 
+AND cuh(3) AND cdm(2) AND NOT(cdm(1)) AND NOT(cum(2)
+) AND cuh(0) AND NOT(cuh(2)) AND cdh(0) AND NOT(
+cuh(1)) AND cum(3) AND cdm(0) AND cdh(2) AND NOT(cdh(3)
+)));
+  END BLOCK label6;
+  label7 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cuh (0) <= GUARDED (aux38 OR ((NOT(aux23) OR cuh(0)) AND NOT(rst) 
+AND (aux21 OR NOT(cdm(2)) OR cdm(1) OR cum(2))) OR (
+aux47 AND NOT(cuh(0)) AND aux44) OR (NOT(rst) AND 
+cuh(0) AND NOT(aux44)));
+  END BLOCK label7;
+  label8 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cuh (1) <= GUARDED ((aux54 AND cuh(1)) OR ((NOT(cuh(3)) OR cuh(2)) 
+AND aux49 AND NOT(cuh(1)) AND aux44) OR (aux48 AND 
+cuh(1) AND NOT(aux44)));
+  END BLOCK label8;
+  label9 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cuh (2) <= GUARDED ((aux54 AND cuh(2)) OR (aux49 AND NOT(cuh(2)) AND
+ aux56) OR (aux48 AND cuh(2) AND NOT(aux56)));
+  END BLOCK label9;
+  label10 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cuh (3) <= GUARDED (aux38 OR ((aux149 OR (cuh(2) XOR cuh(1))) AND (
+NOT(aux23) OR cuh(3)) AND NOT(rst)) OR (aux19 AND 
+NOT(cuh(3)) AND cdm(2) AND NOT(cdm(1)) AND NOT(
+cum(2)) AND cuh(0) AND cuh(2) AND cuh(1) AND aux44) OR 
+(aux57 AND NOT(aux44)));
+  END BLOCK label10;
+  label11 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdm (0) <= GUARDED (aux38 OR (NOT(rst) AND (aux59 OR cum(2) OR NOT(
+cum(3))) AND cdm(0)) OR ((stop OR NOT(aux58)) AND (
+aux39 OR stop) AND aux15 AND NOT(cdm(0))));
+  END BLOCK label11;
+  label12 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdm (1) <= GUARDED ((aux150 AND cdm(1)) OR ((cdm(3) OR NOT(cdm(2))) 
+AND aux61 AND NOT(cdm(1)) AND aux60) OR (aux48 AND 
+cdm(1) AND NOT(aux60)));
+  END BLOCK label12;
+  label13 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdm (2) <= GUARDED (aux38 OR (aux66 AND cdm(2) AND NOT(cdm(1))) OR (
+(NOT(aux23) OR cdm(2)) AND aux64) OR (aux61 AND 
+NOT(cdm(2)) AND cdm(1) AND aux60) OR (aux63 AND NOT(
+aux60)));
+  END BLOCK label13;
+  label14 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cdm (3) <= GUARDED ((aux150 AND cdm(3)) OR (aux19 AND aux70) OR (
+aux66 AND NOT(aux70)));
+  END BLOCK label14;
+  label15 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cum (0) <= GUARDED ((aux0 OR aux145) AND (aux0 OR (NOT(cum(1)) AND 
+aux146) OR stop) AND NOT(rst) AND (maquina OR cum(0)));
+  END BLOCK label15;
+  label16 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cum (1) <= GUARDED ((aux61 AND aux58) OR (aux23 AND NOT(rst) AND 
+aux0 AND cum(1)));
+  END BLOCK label16;
+  label17 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cum (2) <= GUARDED ((aux23 AND NOT(rst) AND aux71 AND cum(2)) OR (
+aux16 AND cum(1) AND NOT(aux147)));
+  END BLOCK label17;
+  label18 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    cum (3) <= GUARDED (aux38 OR (((NOT(rst) AND (aux71 OR stop) AND 
+cum(2)) OR (aux64 AND NOT(cum(2)))) AND cum(3)) OR (
+aux147 AND ((cum(0) AND cum(1)) OR stop) AND aux15 AND 
+NOT(cum(3))));
+  END BLOCK label18;
+  label19 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdh (0) <= GUARDED ((NOT(rst) AND mdh(0) AND aux72) OR ((aux92 OR (
+aux82 AND NOT(mdh(0)))) AND NOT(aux72)));
+  END BLOCK label19;
+  label20 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdh (1) <= GUARDED ((NOT(rst) AND mdh(1) AND aux72) OR ((((aux92 OR 
+((NOT(muh(1)) OR muh(3) OR aux85 OR mdh(3) OR NOT(
+mdm(2)) OR NOT(mum(3)) OR NOT(mum(0)) OR mdh(2) OR 
+mdm(3)) AND NOT(rst) AND NOT(mdh(0)))) AND mdh(1)) OR (
+aux82 AND mdh(0) AND NOT(mdh(1)))) AND NOT(aux72)));
+  END BLOCK label20;
+  label21 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdh (2) <= GUARDED ((NOT(rst) AND mdh(2) AND aux96) OR ((((aux73 OR 
+aux88) AND NOT(rst) AND mdh(2)) OR (aux81 AND NOT(
+mdh(2)))) AND NOT(aux96)));
+  END BLOCK label21;
+  label22 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdh (3) <= GUARDED ((NOT(rst) AND mdh(3) AND aux104) OR ((((aux73 OR
+ aux85) AND NOT(rst) AND mdh(3)) OR (aux78 AND NOT
+(mdh(3)))) AND NOT(aux104)));
+  END BLOCK label22;
+  label23 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    muh (0) <= GUARDED ((NOT(rst) AND muh(0) AND mdm(1)) OR (((NOT(rst) 
+AND aux117 AND muh(0)) OR (aux111 AND NOT(muh(0)))) 
+AND NOT(mdm(1))));
+  END BLOCK label23;
+  label24 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    muh (1) <= GUARDED ((aux118 AND mdm(1)) OR (((aux127 AND (muh(1) XOR
+ muh(0))) OR (aux118 AND aux117)) AND NOT(mdm(1)))
+);
+  END BLOCK label24;
+  label25 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    muh (2) <= GUARDED ((aux127 AND NOT(mdm(1)) AND (((muh(1) XOR muh(2)
+) AND muh(0)) OR (muh(2) AND NOT(muh(0))))) OR (
+NOT(rst) AND muh(2) AND (aux117 OR mdm(1))));
+  END BLOCK label25;
+  label26 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    muh (3) <= GUARDED ((muh(3) AND NOT(rst) AND aux129) OR (((NOT(
+aux119) AND NOT(rst) AND muh(2)) OR (muh(1) AND muh(3) 
+AND NOT(rst) AND NOT(muh(2)))) AND NOT(aux129)));
+  END BLOCK label26;
+  label27 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdm (0) <= GUARDED ((NOT(rst) AND NOT(mum(1) XOR mdm(0)) AND aux131)
+ OR (NOT(rst) AND mdm(0) AND NOT(aux131)));
+  END BLOCK label27;
+  label28 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdm (1) <= GUARDED ((NOT(rst) AND aux132 AND mdm(1)) OR ((NOT(mdm(2)
+) OR mdm(3)) AND aux107 AND mum(3) AND mum(0) AND 
+NOT(mdm(1))));
+  END BLOCK label28;
+  label29 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdm (2) <= GUARDED ((aux132 AND aux133) OR (aux107 AND NOT(mdm(2)) 
+AND mum(3) AND mum(0) AND mdm(1)) OR (aux133 AND 
+aux148));
+  END BLOCK label29;
+  label30 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mdm (3) <= GUARDED ((((NOT(rst) AND aux116 AND mdm(3)) OR aux111) 
+AND mdm(1)) OR (NOT(rst) AND aux148));
+  END BLOCK label30;
+  label31 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mum (0) <= GUARDED NOT(aux134);
+  END BLOCK label31;
+  label32 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mum (1) <= GUARDED ((aux105 AND aux130 AND mum(0)) OR (aux135 AND 
+NOT(mum(0))));
+  END BLOCK label32;
+  label33 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mum (2) <= GUARDED ((aux137 AND mum(0)) OR (NOT(rst) AND mum(2) AND 
+NOT(mum(0))));
+  END BLOCK label33;
+  label34 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    mum (3) <= GUARDED ((((aux137 AND mum(3)) OR (aux135 AND mum(2) AND 
+NOT(mum(3)))) AND mum(0)) OR (NOT(rst) AND mum(3) 
+AND NOT(mum(0))));
+  END BLOCK label34;
+  label35 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_9 (0) <= GUARDED ((aux138 OR cdh(0)) AND (rst OR mdh(0) OR 
+maquina1) AND (NOT(rst) OR rtlalc_9(0)));
+  END BLOCK label35;
+  label36 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_9 (1) <= GUARDED ((NOT(aux25) AND aux139 AND maquina1) OR ((rst OR
+ mdh(1)) AND aux139 AND NOT(maquina1)));
+  END BLOCK label36;
+  label37 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_9 (2) <= GUARDED ((aux138 OR cdh(2)) AND ((rst AND rtlalc_9(2)) OR
+ mdh(2) OR maquina1) AND (NOT(rst) OR rtlalc_9(2))
+);
+  END BLOCK label37;
+  label38 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_9 (3) <= GUARDED ((aux138 OR cdh(3)) AND (rst OR mdh(3) OR 
+maquina1) AND (rtlalc_9(3) OR NOT(rst)));
+  END BLOCK label38;
+  label39 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_10 (0) <= GUARDED (((rst OR cuh(0)) AND aux140 AND maquina1) OR ((
+rst OR muh(0)) AND aux140 AND NOT(maquina1)));
+  END BLOCK label39;
+  label40 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_10 (1) <= GUARDED ((aux138 OR cuh(1)) AND (muh(1) OR (rst AND 
+rtlalc_10(1)) OR maquina1) AND (NOT(rst) OR rtlalc_10(1)));
+  END BLOCK label40;
+  label41 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_10 (2) <= GUARDED ((aux138 OR cuh(2)) AND (rst OR muh(2) OR 
+maquina1) AND (rtlalc_10(2) OR NOT(rst)));
+  END BLOCK label41;
+  label42 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_10 (3) <= GUARDED ((rst AND rtlalc_10(3)) OR (aux57 AND maquina1) 
+OR (muh(3) AND (NOT(rst) OR rtlalc_10(3)) AND NOT(
+maquina1)));
+  END BLOCK label42;
+  label43 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_11 (0) <= GUARDED ((aux138 OR cdm(0)) AND ((rst AND rtlalc_11(0)) 
+OR mdm(0) OR maquina1) AND (NOT(rst) OR 
+rtlalc_11(0)));
+  END BLOCK label43;
+  label44 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_11 (1) <= GUARDED ((rst OR maquina1 OR mdm(1)) AND (rst OR cdm(1) 
+OR NOT(maquina1)) AND (rtlalc_11(1) OR NOT(rst)));
+  END BLOCK label44;
+  label45 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_11 (2) <= GUARDED ((rst AND rtlalc_11(2)) OR (aux63 AND maquina1) 
+OR ((NOT(rst) OR rtlalc_11(2)) AND mdm(2) AND NOT(
+maquina1)));
+  END BLOCK label45;
+  label46 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_11 (3) <= GUARDED (((rst OR cdm(3)) AND aux141 AND maquina1) OR ((
+rst OR mdm(3)) AND aux141 AND NOT(maquina1)));
+  END BLOCK label46;
+  label47 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_12 (0) <= GUARDED (((rst OR cum(0)) AND aux142 AND maquina1) OR (
+aux134 AND aux142 AND NOT(maquina1)));
+  END BLOCK label47;
+  label48 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_12 (1) <= GUARDED (((rst OR cum(1)) AND aux143 AND maquina1) OR (
+NOT(aux105) AND aux143 AND NOT(maquina1)));
+  END BLOCK label48;
+  label49 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_12 (2) <= GUARDED (((rst OR cum(2)) AND aux144 AND maquina1) OR ((
+rst OR mum(2)) AND aux144 AND NOT(maquina1)));
+  END BLOCK label49;
+  label50 : BLOCK ((clk AND NOT((clk'STABLE))) = '1')
+  BEGIN
+    rtlalc_12 (3) <= GUARDED ((aux138 OR cum(3)) AND (rst OR mum(3) OR 
+maquina1) AND (NOT(rst) OR rtlalc_12(3)));
+  END BLOCK label50;
+
+dh (0) <= rtlalc_9(0);
+
+dh (1) <= rtlalc_9(1);
+
+dh (2) <= rtlalc_9(2);
+
+dh (3) <= rtlalc_9(3);
+
+uh (0) <= rtlalc_10(0);
+
+uh (1) <= rtlalc_10(1);
+
+uh (2) <= rtlalc_10(2);
+
+uh (3) <= rtlalc_10(3);
+
+dm (0) <= rtlalc_11(0);
+
+dm (1) <= rtlalc_11(1);
+
+dm (2) <= rtlalc_11(2);
+
+dm (3) <= rtlalc_11(3);
+
+um (0) <= rtlalc_12(0);
+
+um (1) <= rtlalc_12(1);
+
+um (2) <= rtlalc_12(2);
+
+um (3) <= rtlalc_12(3);
+END;

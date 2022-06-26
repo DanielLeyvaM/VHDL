@@ -1,0 +1,32 @@
+entity sum2b_model is
+   port (
+      cix : out     bit;
+      vss : in      bit;
+      vdd : in      bit;
+      ci  : in      bit
+ );
+end sum2b_model;
+
+architecture structural of sum2b_model is
+Component buf_x8
+   port (
+      i   : in      bit;
+      q   : out     bit;
+      vdd : in      bit;
+      vss : in      bit
+ );
+end component;
+
+
+begin
+
+cix_ins : buf_x8
+   port map (
+      i   => ci,
+      q   => cix,
+      vdd => vdd,
+      vss => vss
+   );
+
+
+end structural;

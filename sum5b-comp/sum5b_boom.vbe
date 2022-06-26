@@ -1,0 +1,101 @@
+-- VHDL data flow description generated from `sum5b_boom`
+--		date : Mon Oct 26 21:05:45 2020
+
+
+-- Entity Declaration
+
+ENTITY sum5b_boom IS
+  PORT (
+  a : in bit_vector(4 DOWNTO 0) ;	-- a
+  b : in bit_vector(4 DOWNTO 0) ;	-- b
+  ci : in BIT;	-- ci
+  so : out bit_vector(4 DOWNTO 0) ;	-- so
+  co : out BIT;	-- co
+  vdd : in BIT;	-- vdd
+  vss : in BIT	-- vss
+  );
+END sum5b_boom;
+
+
+-- Architecture Declaration
+
+ARCHITECTURE behaviour_data_flow OF sum5b_boom IS
+  SIGNAL aux0 : BIT;		-- aux0
+  SIGNAL aux1 : BIT;		-- aux1
+  SIGNAL aux3 : BIT;		-- aux3
+  SIGNAL aux4 : BIT;		-- aux4
+  SIGNAL aux5 : BIT;		-- aux5
+  SIGNAL aux6 : BIT;		-- aux6
+  SIGNAL aux8 : BIT;		-- aux8
+  SIGNAL aux9 : BIT;		-- aux9
+  SIGNAL aux10 : BIT;		-- aux10
+  SIGNAL aux12 : BIT;		-- aux12
+  SIGNAL aux14 : BIT;		-- aux14
+  SIGNAL aux15 : BIT;		-- aux15
+  SIGNAL aux18 : BIT;		-- aux18
+  SIGNAL aux23 : BIT;		-- aux23
+  SIGNAL aux24 : BIT;		-- aux24
+  SIGNAL aux25 : BIT;		-- aux25
+  SIGNAL aux26 : BIT;		-- aux26
+  SIGNAL aux27 : BIT;		-- aux27
+  SIGNAL aux28 : BIT;		-- aux28
+  SIGNAL aux29 : BIT;		-- aux29
+  SIGNAL aux30 : BIT;		-- aux30
+  SIGNAL aux31 : BIT;		-- aux31
+  SIGNAL aux32 : BIT;		-- aux32
+  SIGNAL aux33 : BIT;		-- aux33
+
+BEGIN
+  aux33 <= (((aux12 OR b(2)) OR b(1)) AND (aux15 OR b(2)));
+  aux32 <= NOT(((aux15 AND b(2)) AND b(1)) OR (aux12 AND 
+b(2)));
+  aux31 <= (aux6 OR aux4);
+  aux30 <= (a(1) AND b(2));
+  aux29 <= NOT(a(1) OR b(2));
+  aux28 <= NOT(b(2) OR b(1));
+  aux27 <= (aux25 AND aux0);
+  aux26 <= (NOT(aux25) AND aux1);
+  aux25 <= NOT(b(4) XOR a(4));
+  aux24 <= (aux14 OR b(0));
+  aux23 <= (ci OR (a(0) OR a(1)));
+  aux18 <= NOT(b(3) XOR a(3));
+  aux15 <= (aux6 OR aux14);
+  aux14 <= (aux4 OR a(1));
+  aux12 <= ((aux4 OR b(0)) AND aux9);
+  aux10 <= NOT(aux9 AND b(0));
+  aux9 <= (aux5 AND a(1));
+  aux8 <= NOT(ci AND (a(0) AND a(1)));
+  aux6 <= (aux5 AND b(0));
+  aux5 <= (ci OR a(0));
+  aux4 <= (ci AND a(0));
+  aux3 <= ((b(4) AND a(4)) OR NOT(aux1));
+  aux1 <= NOT(b(3) AND a(3));
+  aux0 <= (b(3) OR a(3));
+
+co <= ((NOT(aux32) OR aux3 OR a(2)) AND (NOT(aux10) OR 
+NOT(aux8) OR aux3 OR NOT(aux28)) AND (aux31 OR aux3 
+OR NOT(aux29)) AND ((b(4) AND (aux0 OR a(4))) OR (
+aux0 AND a(4))));
+
+so (0) <= (ci XOR a(0) XOR b(0));
+
+so (1) <= ((((aux5 XOR a(1)) AND b(0)) OR ((aux4 XOR a(1)) 
+AND NOT(b(0)))) XOR b(1));
+
+so (2) <= ((((aux15 XOR b(2)) AND b(1)) OR ((aux12 XOR b(2)
+) AND NOT(b(1)))) XOR a(2));
+
+so (3) <= ((((aux24 AND aux23 AND aux18 AND b(2)) OR (NOT(
+aux31) AND NOT(aux18) AND aux29)) AND b(1)) OR (((
+aux31 AND aux18 AND aux30) OR (aux10 AND aux8 AND NOT(
+aux18) AND NOT(b(2)))) AND NOT(b(1))) OR (aux33 AND 
+aux18 AND a(2)) OR (aux32 AND NOT(aux18) AND NOT(a(2))
+));
+
+so (4) <= ((aux25 AND b(3) AND a(3)) OR (NOT(aux25) AND NOT
+(b(3)) AND NOT(a(3))) OR (aux31 AND aux27 AND 
+aux30) OR (NOT(aux31) AND aux26 AND aux29) OR (aux24 
+AND aux23 AND aux27 AND b(2) AND b(1)) OR (aux10 AND
+ aux8 AND aux26 AND aux28) OR (aux33 AND aux27 AND
+ a(2)) OR (aux32 AND aux26 AND NOT(a(2))));
+END;

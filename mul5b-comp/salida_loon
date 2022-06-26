@@ -1,0 +1,114 @@
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2020,        ASIM/LIP6/UPMC
+                 Author(s):                     François Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /usr/share/alliance/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'mul5b_boog.vst'...
+Reading lib '/usr/share/alliance/cells/sxlib'...
+Capacitances on file 'mul5b_boog.vst'...
+Delays on file 'mul5b_boog.vst'...5323 ps
+Area on file 'mul5b_boog.vst'...860500 lamda² (with over-cell routing)
+Details...
+	inv_x2: 73 (6%)
+	na2_x1: 69 (8%)
+	o2_x2: 61 (8%)
+	a2_x2: 50 (7%)
+	nao22_x1: 46 (8%)
+	no2_x1: 39 (4%)
+	ao22_x2: 37 (6%)
+	oa22_x2: 34 (5%)
+	na3_x1: 27 (3%)
+	mx3_x2: 26 (9%)
+	noa22_x1: 18 (3%)
+	on12_x1: 17 (2%)
+	an12_x1: 14 (2%)
+	xr2_x1: 13 (3%)
+	a3_x2: 12 (2%)
+	o3_x2: 12 (2%)
+	nxr2_x1: 12 (3%)
+	oa2ao222_x2: 9 (2%)
+	na4_x1: 7 (1%)
+	mx2_x2: 6 (1%)
+	oa2a22_x2: 6 (1%)
+	no3_x1: 5 (0%)
+	noa2ao222_x1: 3 (0%)
+	ao2o22_x2: 3 (0%)
+	no4_x1: 3 (0%)
+	a4_x2: 3 (0%)
+	nao2o22_x1: 3 (0%)
+	o4_x2: 1 (0%)
+	oa2a2a2a24_x2: 1 (0%)
+	oa3ao322_x2: 1 (0%)
+	nmx3_x1: 1 (0%)
+	buf_x2: 1 (0%)
+	nmx2_x1: 1 (0%)
+	Total: 614
+Worst RC on file 'mul5b_boog.vst'...1159 ps
+Inserting buffers on critical path for file 'mul5b.vst'...3 buffers inserted -> 5256 ps
+Improving RC on critical path for file 'mul5b.vst'...4967 ps
+Improving all RC for file 'mul5b.vst'...
+Worst RC on file 'mul5b.vst'...1159 ps
+Area on file 'mul5b.vst'...866750 lamda² (with over-cell routing)
+Details...
+	inv_x2: 69 (5%)
+	na2_x1: 69 (7%)
+	o2_x2: 61 (8%)
+	a2_x2: 50 (7%)
+	nao22_x1: 46 (7%)
+	no2_x1: 39 (4%)
+	ao22_x2: 37 (6%)
+	oa22_x2: 34 (5%)
+	na3_x1: 27 (3%)
+	mx3_x2: 26 (9%)
+	noa22_x1: 18 (3%)
+	on12_x1: 17 (2%)
+	an12_x1: 14 (2%)
+	xr2_x1: 13 (3%)
+	a3_x2: 12 (2%)
+	o3_x2: 12 (2%)
+	nxr2_x1: 12 (3%)
+	oa2ao222_x2: 9 (2%)
+	na4_x1: 7 (1%)
+	mx2_x2: 6 (1%)
+	oa2a22_x2: 6 (1%)
+	no3_x1: 5 (0%)
+	buf_x2: 4 (0%)
+	noa2ao222_x1: 3 (0%)
+	ao2o22_x2: 3 (0%)
+	no4_x1: 3 (0%)
+	a4_x2: 3 (0%)
+	nao2o22_x1: 3 (0%)
+	inv_x8: 3 (0%)
+	o4_x2: 1 (0%)
+	oa2a2a2a24_x2: 1 (0%)
+	oa3ao322_x2: 1 (0%)
+	nmx3_x1: 1 (0%)
+	inv_x4: 1 (0%)
+	nmx2_x1: 1 (0%)
+	Total: 617
+Critical path (no warranty)...4967 ps from 'x 3' to 'z 5'
+Saving file 'mul5b.vst'...
+Saving critical path in xsch color file 'mul5b.xsc'...
+End of loon...
+

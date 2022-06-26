@@ -1,0 +1,48 @@
+
+                   @@@@@@                          @@@    @@@
+                     @@                             @@     @ 
+                     @@                             @@@    @ 
+                     @@           @@@       @@@     @ @@   @ 
+                     @@         @@   @@   @@   @@   @ @@   @ 
+                     @@        @@     @@ @@     @@  @  @@  @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@        @@     @@ @@     @@  @   @@ @ 
+                     @@      @ @@     @@ @@     @@  @    @@@ 
+                     @@     @   @@   @@   @@   @@   @     @@ 
+                   @@@@@@@@@@     @@@       @@@    @@@    @@ 
+
+                           Local optimization on Nets
+
+                 Alliance CAD System 5.0, loon 5.0 [2003/12/07]
+                 Copyright (c) 2000-2020,        ASIM/LIP6/UPMC
+                 Author(s):                     François Donnet
+                 E-mail        :    alliance-users@asim.lip6.fr
+
+	MBK_IN_LO	: vst
+	MBK_OUT_LO	: vst
+	MBK_TARGET_LIB	: /usr/share/alliance/cells/sxlib
+
+Reading default parameter...
+50% area - 50% delay optimization
+Reading file 'mux21_boog.vst'...
+Reading lib '/usr/share/alliance/cells/sxlib'...
+Capacitances on file 'mux21_boog.vst'...
+Delays on file 'mux21_boog.vst'...506 ps
+Area on file 'mux21_boog.vst'...2250 lamda² (with over-cell routing)
+Details...
+	mx2_x2: 1 (100%)
+	Total: 1
+Worst RC on file 'mux21_boog.vst'...0 ps
+Inserting buffers on critical path for file 'mux21.vst'...None inserted
+Improving RC on critical path for file 'mux21.vst'...506 ps
+Improving all RC for file 'mux21.vst'...
+Worst RC on file 'mux21.vst'...0 ps
+Area on file 'mux21.vst'...2250 lamda² (with over-cell routing)
+Details...
+	mx2_x2: 1 (100%)
+	Total: 1
+Critical path (no warranty)...506 ps from 'b' to 'x'
+Saving file 'mux21.vst'...
+Saving critical path in xsch color file 'mux21.xsc'...
+End of loon...
+

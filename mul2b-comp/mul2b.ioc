@@ -1,0 +1,15 @@
+LEFT
+(
+    (IOPIN x(0).0); 
+    (IOPIN x(1).0); 
+    (IOPIN y(0).0); 
+    (IOPIN y(1).0); 
+
+)
+RIGHT
+(
+    (IOPIN z(0).0);
+    (IOPIN z(1).0);
+    (IOPIN z(2).0);
+    (IOPIN z(3).0);
+)

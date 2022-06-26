@@ -1,0 +1,159 @@
+V ALLIANCE : 6
+H sum5b_ocp,P,26/10/2020,100
+A 0,0,40000,35000
+C 10000,35000,200,ci,0,NORTH,ALU2
+C 30000,35000,200,co,0,NORTH,ALU2
+C 0,3500,100,a 0,0,WEST,ALU3
+C 0,10500,100,a 1,0,WEST,ALU3
+C 0,17500,100,a 2,0,WEST,ALU3
+C 0,24500,100,a 3,0,WEST,ALU3
+C 0,31500,100,a 4,0,WEST,ALU3
+C 4000,0,200,b 0,0,SOUTH,ALU2
+C 12000,0,200,b 1,0,SOUTH,ALU2
+C 20000,0,200,b 2,0,SOUTH,ALU2
+C 28000,0,200,b 3,0,SOUTH,ALU2
+C 36000,0,200,b 4,0,SOUTH,ALU2
+C 40000,3500,100,so 0,0,EAST,ALU3
+C 40000,10500,100,so 1,0,EAST,ALU3
+C 40000,17500,100,so 2,0,EAST,ALU3
+C 40000,24500,100,so 3,0,EAST,ALU3
+C 40000,31500,100,so 4,0,EAST,ALU3
+I 39000,30000,tie_x0,tiex0_48,SYM_Y
+I 32000,25000,tie_x0,tiex0_47,NOSYM
+I 32000,20000,tie_x0,tiex0_46,SYM_Y
+I 28500,25000,tie_x0,tiex0_45,NOSYM
+I 28000,30000,tie_x0,tiex0_44,SYM_Y
+I 25000,30000,tie_x0,tiex0_43,SYM_Y
+I 25000,25000,tie_x0,tiex0_42,NOSYM
+I 25000,5000,tie_x0,tiex0_41,NOSYM
+I 23000,15000,tie_x0,tiex0_40,NOSYM
+I 22500,30000,tie_x0,tiex0_39,SYM_Y
+I 22500,25000,tie_x0,tiex0_38,NOSYM
+I 20500,0,tie_x0,tiex0_37,SYM_Y
+I 20000,5000,tie_x0,tiex0_36,NOSYM
+I 19500,20000,tie_x0,tiex0_35,SYM_Y
+I 19500,15000,rowend_x0,rowendx0_34,NOSYM
+I 19000,30000,tie_x0,tiex0_33,SYM_Y
+I 18500,25000,tie_x0,tiex0_32,NOSYM
+I 17000,20000,tie_x0,tiex0_31,SYM_Y
+I 16500,5000,tie_x0,tiex0_30,NOSYM
+I 16000,0,tie_x0,tiex0_29,SYM_Y
+I 15500,30000,tie_x0,tiex0_28,SYM_Y
+I 15500,15000,tie_x0,tiex0_27,NOSYM
+I 15000,25000,tie_x0,tiex0_26,NOSYM
+I 13500,20000,rowend_x0,rowendx0_25,SYM_Y
+I 13000,30000,tie_x0,tiex0_24,SYM_Y
+I 13000,15000,tie_x0,tiex0_23,NOSYM
+I 12500,5000,tie_x0,tiex0_22,NOSYM
+I 12500,0,tie_x0,tiex0_21,SYM_Y
+I 11500,25000,tie_x0,tiex0_20,NOSYM
+I 10500,30000,tie_x0,tiex0_19,SYM_Y
+I 10000,0,tie_x0,tiex0_18,SYM_Y
+I 9500,20000,tie_x0,tiex0_17,SYM_Y
+I 9500,10000,tie_x0,tiex0_16,SYM_Y
+I 9000,5000,tie_x0,tiex0_15,NOSYM
+I 8500,25000,tie_x0,tiex0_14,NOSYM
+I 8500,15000,tie_x0,tiex0_13,NOSYM
+I 7000,20000,tie_x0,tiex0_12,SYM_Y
+I 5500,5000,tie_x0,tiex0_11,NOSYM
+I 5000,30000,tie_x0,tiex0_10,SYM_Y
+I 5000,15000,tie_x0,tiex0_9,NOSYM
+I 4500,25000,tie_x0,tiex0_8,NOSYM
+I 4500,0,tie_x0,tiex0_7,SYM_Y
+I 4000,20000,tie_x0,tiex0_6,SYM_Y
+I 2500,15000,tie_x0,tiex0_5,NOSYM
+I 2500,10000,tie_x0,tiex0_4,SYM_Y
+I 2500,5000,tie_x0,tiex0_3,NOSYM
+I 1500,30000,tie_x0,tiex0_2,SYM_Y
+I 1500,20000,tie_x0,tiex0_1,SYM_Y
+I 30500,30000,no3_x1,no3_x1_5_ins,SYM_Y
+I 33000,30000,no4_x1,no4_x1_3_ins,SYM_Y
+I 29000,30000,inv_x2,not_b_3_ins,SYM_Y
+I 36000,30000,a3_x2,a3_x2_4_ins,SYM_Y
+I 26000,30000,na2_x1,aux1_ins,SYM_Y
+I 20000,30000,a2_x2,not_aux0_ins,SYM_Y
+I 23500,30000,inv_x2,not_a_3_ins,SYM_Y
+I 14000,30000,inv_x2,inv_x2_ins,SYM_Y
+I 16500,30000,o2_x2,not_aux27_ins,SYM_Y
+I 6000,30000,ao2o22_x2,ao2o22_x2_ins,SYM_Y
+I 11500,30000,inv_x2,inv_x2_3_ins,SYM_Y
+I 0,30000,inv_x2,not_a_4_ins,SYM_Y
+I 2500,30000,a2_x2,a2_x2_ins,SYM_Y
+I 36000,25000,no3_x1,no3_x1_7_ins,NOSYM
+I 33000,25000,na4_x1,so_4_ins,NOSYM
+I 38500,25000,inv_x2,not_a_2_ins,NOSYM
+I 19500,25000,no4_x1,co_ins,NOSYM
+I 16000,25000,no3_x1,no3_x1_ins,NOSYM
+I 9500,25000,no2_x1,no2_x1_2_ins,NOSYM
+I 26000,25000,a2_x2,aux26_ins,NOSYM
+I 29500,25000,na3_x1,na3_x1_ins,NOSYM
+I 23500,25000,inv_x2,not_aux26_ins,NOSYM
+I 12500,25000,no3_x1,no3_x1_8_ins,NOSYM
+I 5500,25000,oa22_x2,aux3_ins,NOSYM
+I 0,25000,xr2_x1,not_aux25_ins,NOSYM
+I 37500,20000,na3_x1,so_3_ins,SYM_Y
+I 33000,20000,no2_x1,no2_x1_ins,SYM_Y
+I 35000,20000,no3_x1,no3_x1_4_ins,SYM_Y
+I 20500,20000,a3_x2,a3_x2_2_ins,SYM_Y
+I 28000,20000,no3_x1,no3_x1_3_ins,SYM_Y
+I 23500,20000,nxr2_x1,aux18_ins,SYM_Y
+I 10500,20000,no4_x1,no4_x1_4_ins,SYM_Y
+I 8000,20000,inv_x2,not_aux8_ins,SYM_Y
+I 5000,20000,na2_x1,aux5_ins,SYM_Y
+I 14000,20000,no4_x1,no4_x1_ins,SYM_Y
+I 18000,20000,inv_x2,inv_x2_2_ins,SYM_Y
+I 30500,20000,inv_x2,not_aux18_ins,SYM_Y
+I 2500,20000,inv_x2,not_ci_ins,SYM_Y
+I 0,20000,inv_x2,not_aux10_ins,SYM_Y
+I 34500,15000,no3_x1,no3_x1_2_ins,NOSYM
+I 32000,15000,no3_x1,no3_x1_6_ins,NOSYM
+I 29000,15000,nao22_x1,nao22_x1_2_ins,NOSYM
+I 37000,15000,nao22_x1,nao22_x1_ins,NOSYM
+I 26000,15000,a3_x2,a3_x2_3_ins,NOSYM
+I 24000,15000,na2_x1,na2_x1_ins,NOSYM
+I 16500,15000,no4_x1,no4_x1_2_ins,NOSYM
+I 14000,15000,inv_x2,inv_x2_4_ins,NOSYM
+I 20000,15000,no4_x1,no4_x1_5_ins,NOSYM
+I 9500,15000,a4_x2,a4_x2_ins,NOSYM
+I 0,15000,na3_x1,aux8_ins,NOSYM
+I 6000,15000,na3_x1,aux23_ins,NOSYM
+I 3500,15000,inv_x2,not_a_0_ins,NOSYM
+I 31000,10000,xr2_x1,so_1_ins,SYM_Y
+I 35500,10000,xr2_x1,so_2_ins,SYM_Y
+I 27000,10000,no2_x1,aux29_ins,SYM_Y
+I 29000,10000,na2_x1,not_aux30_ins,SYM_Y
+I 20500,10000,buf_x2,mbk_buf_aux5,SYM_Y
+I 16000,10000,oa2a22_x2,oa2a22_x2_ins,SYM_Y
+I 22500,10000,xr2_x1,xr2_x1_3_ins,SYM_Y
+I 3500,10000,xr2_x1,xr2_x1_2_ins,SYM_Y
+I 12000,10000,inv_x2,not_aux5_ins,SYM_Y
+I 10500,10000,inv_x2,not_a_1_ins,SYM_Y
+I 13500,10000,a2_x2,not_aux24_ins,SYM_Y
+I 8000,10000,inv_x2,not_aux4_ins,SYM_Y
+I 0,10000,a2_x2,aux4_ins,SYM_Y
+I 26000,5000,buf_x2,mbk_buf_not_aux12,NOSYM
+I 37000,5000,a3_x2,a3_x2_ins,NOSYM
+I 34000,5000,oa22_x2,not_aux33_ins,NOSYM
+I 28000,5000,nao22_x1,not_aux32_ins,NOSYM
+I 31000,5000,o3_x2,o3_x2_ins,NOSYM
+I 21000,5000,o2_x2,not_aux28_ins,NOSYM
+I 13500,5000,noa22_x1,aux12_ins,NOSYM
+I 6500,5000,o2_x2,not_aux9_ins,NOSYM
+I 17500,5000,a2_x2,not_aux31_ins,NOSYM
+I 0,5000,o2_x2,aux10_ins,NOSYM
+I 23500,5000,inv_x2,not_aux12_ins,NOSYM
+I 3500,5000,buf_x2,mbk_buf_not_aux9,NOSYM
+I 10000,5000,a2_x2,not_aux14_ins,NOSYM
+I 25000,0,xr2_x1,xr2_x1_5_ins,SYM_Y
+I 29500,0,inv_x2,not_aux15_ins,SYM_Y
+I 21500,0,inv_x2,not_b_2_ins,SYM_Y
+I 31000,0,xr2_x1,xr2_x1_4_ins,SYM_Y
+I 35500,0,oa2a22_x2,oa2a22_x2_2_ins,SYM_Y
+I 23000,0,buf_x2,mbk_buf_aux12,SYM_Y
+I 17000,0,na2_x1,aux15_ins,SYM_Y
+I 13500,0,o2_x2,not_aux6_ins,SYM_Y
+I 19000,0,inv_x2,not_b_1_ins,SYM_Y
+I 11000,0,inv_x2,not_b_0_ins,SYM_Y
+I 0,0,xr2_x1,xr2_x1_ins,SYM_Y
+I 5500,0,xr2_x1,so_0_ins,SYM_Y
+EOF
